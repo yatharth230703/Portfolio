@@ -7,8 +7,8 @@ interface LineNumbersProps {
 
 export function LineNumbers({ count, className }: LineNumbersProps) {
   return (
-    <div className={cn("w-12 bg-editor border-r border-ide py-4 text-right text-secondary-ide text-sm font-mono", className)}>
-      <div className="space-y-1 px-2">
+    <div className={cn("w-8 bg-editor border-r border-ide py-2 text-right text-secondary-ide text-xs font-mono", className)}>
+      <div className="space-y-0.5 px-1">
         {Array.from({ length: count }, (_, i) => (
           <div key={i + 1}>{i + 1}</div>
         ))}

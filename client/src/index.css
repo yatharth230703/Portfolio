@@ -75,6 +75,7 @@
   .ide-container {
     background-color: var(--editor-bg);
     color: var(--text-primary);
+    font-size: 0.8rem; /* 20% smaller base font */
   }
   
   .sidebar-bg {
@@ -127,6 +128,19 @@
   
   .bg-sidebar {
     background-color: var(--sidebar-bg);
+  }
+  
+  /* Compact sizing classes */
+  .compact-spacing {
+    @apply space-y-2;
+  }
+  
+  .compact-padding {
+    @apply p-2;
+  }
+  
+  .compact-margin {
+    @apply m-1;
   }
 }
 

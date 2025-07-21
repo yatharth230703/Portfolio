@@ -74,27 +74,27 @@ export default function Projects() {
             <div className="warning-orange mb-4">projects = [</div>
             
             {/* Project Cards Slider */}
-            <div className="ml-4 space-y-6">
+            <div className="ml-4 space-y-3">
               {/* Horizontal Cards */}
-              <div className="flex gap-4 overflow-x-auto pb-4">
+              <div className="flex gap-2 overflow-x-auto pb-2">
                 {projects.map((project, index) => (
                   <div 
                     key={project.id}
                     onClick={() => handleProjectSelect(index)}
-                    className={`min-w-80 cursor-pointer transition-all ${
+                    className={`min-w-64 cursor-pointer transition-all ${
                       selectedProject === index ? 'scale-105' : 'opacity-70 hover:opacity-90'
                     }`}
                   >
-                    <Card className={`bg-sidebar border-ide p-4 ${
+                    <Card className={`bg-sidebar border-ide p-2 ${
                       selectedProject === index ? 'border-accent-blue' : ''
                     }`}>
                       <img 
                         src={project.image}
                         alt={project.title}
-                        className="rounded-lg w-full h-32 object-cover border border-ide mb-3"
+                        className="rounded-lg w-full h-20 object-cover border border-ide mb-2"
                       />
-                      <h3 className="text-lg warning-orange mb-2">{project.title}</h3>
-                      <div className="flex gap-2 flex-wrap">
+                      <h3 className="text-sm warning-orange mb-1">{project.title}</h3>
+                      <div className="flex gap-1 flex-wrap">
                         {project.tech.map((tech) => (
                           <Badge 
                             key={tech}
@@ -110,43 +110,43 @@ export default function Projects() {
               </div>
               
               {/* Detailed View for Selected Project */}
-              <Card className="bg-sidebar border-ide p-6 border-accent-blue">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Card className="bg-sidebar border-ide p-3 border-accent-blue">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                   <div>
                     <img 
                       src={projects[selectedProject].image}
                       alt={projects[selectedProject].title}
-                      className="rounded-lg w-full h-64 object-cover border border-ide"
+                      className="rounded-lg w-full h-32 object-cover border border-ide"
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl warning-orange mb-3">{projects[selectedProject].title}</h3>
-                    <p className="text-primary-ide mb-4 leading-relaxed">
+                    <h3 className="text-lg warning-orange mb-2">{projects[selectedProject].title}</h3>
+                    <p className="text-primary-ide mb-3 leading-relaxed text-xs">
                       {projects[selectedProject].description}
                     </p>
-                    <div className="flex gap-2 mb-6 flex-wrap">
+                    <div className="flex gap-1 mb-3 flex-wrap">
                       {projects[selectedProject].tech.map((tech) => (
                         <Badge 
                           key={tech}
-                          className={`${techColors[tech]} text-white`}
+                          className={`${techColors[tech]} text-white text-xs`}
                         >
                           {tech}
                         </Badge>
                       ))}
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-3">
                       <Button 
                         variant="ghost" 
-                        className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto"
+                        className="flex items-center gap-1 text-accent-blue hover:text-warning-orange p-0 h-auto text-xs"
                       >
-                        <ExternalLink className="h-4 w-4" />
+                        <ExternalLink className="h-3 w-3" />
                         <span>Live Demo</span>
                       </Button>
                       <Button 
                         variant="ghost" 
-                        className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto"
+                        className="flex items-center gap-1 text-accent-blue hover:text-warning-orange p-0 h-auto text-xs"
                       >
-                        <Github className="h-4 w-4" />
+                        <Github className="h-3 w-3" />
                         <span>View Code</span>
                       </Button>
                     </div>

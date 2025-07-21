@@ -30,17 +30,17 @@ export function TabBar({ tabs, activeTab, onTabSelect, onTabClose }: TabBarProps
             key={tab.path}
             onClick={() => onTabSelect(tab.path)}
             className={cn(
-              "flex items-center gap-2 px-4 py-2 text-sm border-r border-ide cursor-pointer",
+              "flex items-center gap-1 px-2 py-1 text-xs border-r border-ide cursor-pointer",
               activeTab === tab.path 
                 ? "bg-editor text-primary-ide" 
                 : "text-secondary-ide hover:text-primary-ide"
             )}
           >
-            <FileCode className={cn("h-4 w-4", fileColors[tab.icon])} />
+            <FileCode className={cn("h-3 w-3", fileColors[tab.icon])} />
             <span>{tab.name}</span>
             {onTabClose && (
               <X 
-                className="h-3 w-3 text-secondary-ide hover:text-primary-ide ml-2"
+                className="h-2.5 w-2.5 text-secondary-ide hover:text-primary-ide ml-1"
                 onClick={(e) => {
                   e.stopPropagation();
                   onTabClose(tab.path);

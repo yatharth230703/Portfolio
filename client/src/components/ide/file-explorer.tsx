@@ -30,28 +30,28 @@ const fileColors = {
 
 export function FileExplorer({ files, onFileSelect, activeFile }: FileExplorerProps) {
   return (
-    <div className="w-60 bg-sidebar border-r border-ide flex flex-col">
+    <div className="w-48 bg-sidebar border-r border-ide flex flex-col">
       {/* Explorer Header */}
-      <div className="p-3 border-b border-ide">
-        <div className="flex items-center gap-2 text-secondary-ide text-sm">
-          <FolderOpen className="h-4 w-4 accent-blue" />
+      <div className="p-2 border-b border-ide">
+        <div className="flex items-center gap-1 text-secondary-ide text-xs">
+          <FolderOpen className="h-3 w-3 accent-blue" />
           <span>PORTFOLIO</span>
         </div>
       </div>
       
       {/* File Tree */}
-      <div className="flex-1 p-2 overflow-y-auto">
-        <div className="space-y-1">
+      <div className="flex-1 p-1 overflow-y-auto">
+        <div className="space-y-0.5">
           {files.map((file) => (
             <div
               key={file.path}
               onClick={() => onFileSelect(file.path)}
               className={cn(
-                "flex items-center gap-2 px-2 py-1 text-sm hover-gray rounded cursor-pointer",
+                "flex items-center gap-1 px-1.5 py-0.5 text-xs hover-gray rounded cursor-pointer",
                 activeFile === file.path && "bg-editor text-primary-ide"
               )}
             >
-              <FileCode className={cn("h-4 w-4", fileColors[file.icon])} />
+              <FileCode className={cn("h-3 w-3", fileColors[file.icon])} />
               <span>{file.name}</span>
             </div>
           ))}
@@ -59,9 +59,9 @@ export function FileExplorer({ files, onFileSelect, activeFile }: FileExplorerPr
       </div>
       
       {/* Bottom Status */}
-      <div className="p-3 border-t border-ide">
-        <div className="flex items-center gap-2 text-xs text-secondary-ide">
-          <Circle className="w-2 h-2 fill-current success-green" />
+      <div className="p-2 border-t border-ide">
+        <div className="flex items-center gap-1 text-xs text-secondary-ide">
+          <Circle className="w-1.5 h-1.5 fill-current success-green" />
           <span>Ready</span>
         </div>
       </div>

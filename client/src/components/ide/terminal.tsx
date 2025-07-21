@@ -74,61 +74,61 @@ export function Terminal() {
   };
 
   return (
-    <div className="h-48 bg-editor border-t border-ide flex-shrink-0">
-      <div className="flex items-center gap-2 px-4 py-2 bg-sidebar border-b border-ide text-sm">
-        <TerminalIcon className="h-4 w-4 accent-blue" />
+    <div className="h-32 bg-editor border-t border-ide flex-shrink-0">
+      <div className="flex items-center gap-1 px-2 py-1 bg-sidebar border-b border-ide text-xs">
+        <TerminalIcon className="h-3 w-3 accent-blue" />
         <span className="text-secondary-ide">TERMINAL</span>
-        <div className="flex ml-auto gap-2">
-          <Button variant="ghost" size="sm" className="text-secondary-ide hover:text-primary-ide">
-            <Plus className="h-4 w-4" />
+        <div className="flex ml-auto gap-1">
+          <Button variant="ghost" size="sm" className="text-secondary-ide hover:text-primary-ide h-5 w-5 p-0">
+            <Plus className="h-2.5 w-2.5" />
           </Button>
-          <Button variant="ghost" size="sm" className="text-secondary-ide hover:text-primary-ide">
-            <X className="h-4 w-4" />
+          <Button variant="ghost" size="sm" className="text-secondary-ide hover:text-primary-ide h-5 w-5 p-0">
+            <X className="h-2.5 w-2.5" />
           </Button>
         </div>
       </div>
       
-      <div className="flex-1 p-4 overflow-y-auto font-mono text-sm">
-        <div className="space-y-2">
+      <div className="flex-1 p-2 overflow-y-auto font-mono text-xs">
+        <div className="space-y-1">
           <div className="flex">
             <span className="success-green">portfolio@dev:~$</span>
-            <span className="text-primary-ide ml-2">Send me a message directly to my phone & email!</span>
+            <span className="text-primary-ide ml-1">Send me a message directly!</span>
           </div>
-          <div className="text-secondary-ide">// This terminal connects to Resend API + Twilio for instant messaging</div>
+          <div className="text-secondary-ide">// Terminal connects to Resend API + Twilio</div>
           
           {/* Terminal Output */}
-          <div className="space-y-1 mt-4 max-h-16 overflow-y-auto">
+          <div className="space-y-0.5 mt-2 max-h-8 overflow-y-auto">
             {messages.map((msg, index) => (
-              <div key={index} className="text-secondary-ide text-sm">
+              <div key={index} className="text-secondary-ide text-xs">
                 <span className={msg.type === "sent" ? "success-green" : msg.type === "error" ? "text-red-400" : "warning-orange"}>
                   [{msg.timestamp}]
                 </span>{" "}
-                {msg.type === "sent" ? `Message sent: "${msg.content}"` : msg.content}
+                {msg.type === "sent" ? `Sent: "${msg.content}"` : msg.content}
               </div>
             ))}
           </div>
           
           {/* Message Input */}
-          <div className="flex items-start gap-2 mt-4">
+          <div className="flex items-start gap-1 mt-2">
             <span className="success-green">{'>'}</span>
             <div className="flex-1">
               <Textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="w-full bg-transparent text-primary-ide border-none outline-none resize-none p-0 font-mono"
-                placeholder="Type your message here... (will be sent to WhatsApp, SMS & Email)"
-                rows={2}
+                className="w-full bg-transparent text-primary-ide border-none outline-none resize-none p-0 font-mono text-xs"
+                placeholder="Type message... (WhatsApp, SMS & Email)"
+                rows={1}
               />
-              <div className="flex justify-between items-center mt-2">
-                <div className="text-secondary-ide text-xs">Press Ctrl+Enter to send</div>
+              <div className="flex justify-between items-center mt-1">
+                <div className="text-secondary-ide text-xs">Ctrl+Enter</div>
                 <Button
                   onClick={handleSend}
                   disabled={!message.trim() || sendMessageMutation.isPending}
                   size="sm"
-                  className="bg-accent-blue hover:bg-blue-600 text-white"
+                  className="bg-accent-blue hover:bg-blue-600 text-white h-5 px-2 text-xs"
                 >
-                  {sendMessageMutation.isPending ? "Sending..." : "Send Message"}
+                  {sendMessageMutation.isPending ? "..." : "Send"}
                 </Button>
               </div>
             </div>

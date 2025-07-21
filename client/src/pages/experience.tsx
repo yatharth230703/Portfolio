@@ -73,34 +73,34 @@ export default function Experience() {
             <div className="ml-4 text-secondary-ide">public:</div>
             
             {/* Timeline Container */}
-            <div className="ml-8 space-y-6 relative">
+            <div className="ml-8 space-y-3 relative">
               {/* Timeline Line */}
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-accent-blue"></div>
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-accent-blue"></div>
               
               {experiences.map((exp, index) => {
                 const IconComponent = exp.icon;
                 const CompanyIconComponent = exp.companyIcon;
                 
                 return (
-                  <div key={exp.id} className="flex gap-6 relative">
-                    <div className={`w-12 h-12 bg-${exp.color} rounded-full flex items-center justify-center flex-shrink-0 relative z-10`}>
-                      <IconComponent className="h-5 w-5 text-white" />
+                  <div key={exp.id} className="flex gap-3 relative">
+                    <div className={`w-8 h-8 bg-${exp.color} rounded-full flex items-center justify-center flex-shrink-0 relative z-10`}>
+                      <IconComponent className="h-3 w-3 text-white" />
                     </div>
-                    <Card className="flex-1 bg-sidebar border-ide p-4">
-                      <div className="flex items-start justify-between mb-3">
+                    <Card className="flex-1 bg-sidebar border-ide p-3">
+                      <div className="flex items-start justify-between mb-2">
                         <div>
-                          <h3 className="text-lg warning-orange">{exp.title}</h3>
-                          <p className="accent-blue">{exp.company}</p>
-                          <p className="text-secondary-ide text-sm">{exp.duration}</p>
+                          <h3 className="text-sm warning-orange">{exp.title}</h3>
+                          <p className="accent-blue text-xs">{exp.company}</p>
+                          <p className="text-secondary-ide text-xs">{exp.duration}</p>
                         </div>
-                        <div className={`w-12 h-12 bg-${exp.color} rounded flex items-center justify-center`}>
-                          <CompanyIconComponent className="h-5 w-5 text-white" />
+                        <div className={`w-8 h-8 bg-${exp.color} rounded flex items-center justify-center`}>
+                          <CompanyIconComponent className="h-3 w-3 text-white" />
                         </div>
                       </div>
-                      <p className="text-primary-ide mb-3">
+                      <p className="text-primary-ide mb-2 text-xs">
                         {exp.description}
                       </p>
-                      <div className="flex gap-2 flex-wrap">
+                      <div className="flex gap-1 flex-wrap">
                         {exp.skills.map((skill) => (
                           <Badge 
                             key={skill}
