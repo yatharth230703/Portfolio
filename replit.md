@@ -120,6 +120,16 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**January 21, 2025 - Compact UI & Layout Fixes**
+- Reduced all UI elements by 30% for better content visibility without scrolling
+- Made file explorer 20% smaller (w-48, smaller icons, text-xs)
+- Made tab bar more compact (reduced padding, smaller fonts, smaller close buttons)
+- Made terminal 33% smaller (h-32, compact button sizes)
+- Made chatbot sidebar narrower (w-64, smaller avatars, text-xs)
+- Made all page content more compact (smaller cards, reduced spacing, text-xs)
+- Fixed terminal layout to span only middle section between file explorer and chatbot
+- Ensured both sidebars extend full height to bottom of screen
+
 **December 21, 2025 - IDE Layout Improvements**
 - Fixed terminal footer to remain always visible at bottom of interface
 - Made sidebar and chatbot extend full height with terminal between them  
