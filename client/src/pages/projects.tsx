@@ -48,25 +48,17 @@ const techColors: Record<string, string> = {
 };
 
 export default function Projects() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % projects.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+  const handleProjectSelect = (index: number) => {
+    setSelectedProject(index);
   };
 
   return (
-    <div className="flex-1 flex">
+    <div className="flex-1 flex h-full">
       <LineNumbers count={30} />
       
-      <div className="flex-1 p-4 overflow-y-auto">
+      <div className="flex-1 p-4 overflow-y-auto h-full">
         <CodeBlock>
           <Comment>
             <span># Projects Portfolio Module</span><br />
@@ -81,77 +73,86 @@ export default function Projects() {
           <div className="my-6">
             <div className="warning-orange mb-4">projects = [</div>
             
-            {/* Project Carousel Container */}
-            <div className="ml-4 relative">
-              <div className="overflow-hidden">
-                <div 
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                >
-                  {projects.map((project) => (
-                    <div key={project.id} className="min-w-full">
-                      <Card className="bg-sidebar border-ide p-6">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                          <div>
-                            <img 
-                              src={project.image}
-                              alt={project.title}
-                              className="rounded-lg w-full h-48 object-cover border border-ide"
-                            />
-                          </div>
-                          <div>
-                            <h3 className="text-xl warning-orange mb-2">{project.title}</h3>
-                            <p className="text-secondary-ide mb-4">
-                              {project.description}
-                            </p>
-                            <div className="flex gap-2 mb-4 flex-wrap">
-                              {project.tech.map((tech) => (
-                                <Badge 
-                                  key={tech}
-                                  className={`${techColors[tech]} text-white text-xs`}
-                                >
-                                  {tech}
-                                </Badge>
-                              ))}
-                            </div>
-                            <div className="flex gap-4">
-                              <Button 
-                                variant="ghost" 
-                                className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto"
-                              >
-                                <ExternalLink className="h-4 w-4" />
-                                <span>Live Demo</span>
-                              </Button>
-                              <Button 
-                                variant="ghost" 
-                                className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto"
-                              >
-                                <Github className="h-4 w-4" />
-                                <span>Code</span>
-                              </Button>
-                            </div>
-                          </div>
-                        </div>
-                      </Card>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Carousel Controls */}
-              <div className="flex justify-center mt-4 gap-2">
-                {projects.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide 
-                        ? 'bg-accent-blue' 
-                        : 'bg-secondary-ide opacity-50'
+            {/* Project Cards Slider */}
+            <div className="ml-4 space-y-6">
+              {/* Horizontal Cards */}
+              <div className="flex gap-4 overflow-x-auto pb-4">
+                {projects.map((project, index) => (
+                  <div 
+                    key={project.id}
+                    onClick={() => handleProjectSelect(index)}
+                    className={`min-w-80 cursor-pointer transition-all ${
+                      selectedProject === index ? 'scale-105' : 'opacity-70 hover:opacity-90'
                     }`}
-                  />
+                  >
+                    <Card className={`bg-sidebar border-ide p-4 ${
+                      selectedProject === index ? 'border-accent-blue' : ''
+                    }`}>
+                      <img 
+                        src={project.image}
+                        alt={project.title}
+                        className="rounded-lg w-full h-32 object-cover border border-ide mb-3"
+                      />
+                      <h3 className="text-lg warning-orange mb-2">{project.title}</h3>
+                      <div className="flex gap-2 flex-wrap">
+                        {project.tech.map((tech) => (
+                          <Badge 
+                            key={tech}
+                            className={`${techColors[tech]} text-white text-xs`}
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </Card>
+                  </div>
                 ))}
               </div>
+              
+              {/* Detailed View for Selected Project */}
+              <Card className="bg-sidebar border-ide p-6 border-accent-blue">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div>
+                    <img 
+                      src={projects[selectedProject].image}
+                      alt={projects[selectedProject].title}
+                      className="rounded-lg w-full h-64 object-cover border border-ide"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl warning-orange mb-3">{projects[selectedProject].title}</h3>
+                    <p className="text-primary-ide mb-4 leading-relaxed">
+                      {projects[selectedProject].description}
+                    </p>
+                    <div className="flex gap-2 mb-6 flex-wrap">
+                      {projects[selectedProject].tech.map((tech) => (
+                        <Badge 
+                          key={tech}
+                          className={`${techColors[tech]} text-white`}
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex gap-4">
+                      <Button 
+                        variant="ghost" 
+                        className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        <span>Live Demo</span>
+                      </Button>
+                      <Button 
+                        variant="ghost" 
+                        className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto"
+                      >
+                        <Github className="h-4 w-4" />
+                        <span>View Code</span>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
             </div>
             
             <div className="warning-orange">]</div>

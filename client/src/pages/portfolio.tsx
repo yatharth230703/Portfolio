@@ -80,14 +80,15 @@ export default function Portfolio() {
           onTabClose={handleTabClose}
         />
         
-        <div className="flex-1 flex">
-          {renderContent()}
+        <div className="flex-1 flex overflow-hidden">
+          <div className="flex-1 overflow-hidden">
+            {renderContent()}
+          </div>
+          <ChatBot />
         </div>
         
         <Terminal />
       </div>
-
-      <ChatBot />
     </div>
   );
 }

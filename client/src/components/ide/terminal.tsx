@@ -74,7 +74,7 @@ export function Terminal() {
   };
 
   return (
-    <div className="h-48 bg-editor border-t border-ide">
+    <div className="h-48 bg-editor border-t border-ide flex-shrink-0">
       <div className="flex items-center gap-2 px-4 py-2 bg-sidebar border-b border-ide text-sm">
         <TerminalIcon className="h-4 w-4 accent-blue" />
         <span className="text-secondary-ide">TERMINAL</span>
@@ -88,7 +88,7 @@ export function Terminal() {
         </div>
       </div>
       
-      <div className="p-4 h-full overflow-y-auto font-mono text-sm">
+      <div className="flex-1 p-4 overflow-y-auto font-mono text-sm">
         <div className="space-y-2">
           <div className="flex">
             <span className="success-green">portfolio@dev:~$</span>
@@ -97,7 +97,7 @@ export function Terminal() {
           <div className="text-secondary-ide">// This terminal connects to Resend API + Twilio for instant messaging</div>
           
           {/* Terminal Output */}
-          <div className="space-y-1 mt-4">
+          <div className="space-y-1 mt-4 max-h-16 overflow-y-auto">
             {messages.map((msg, index) => (
               <div key={index} className="text-secondary-ide text-sm">
                 <span className={msg.type === "sent" ? "success-green" : msg.type === "error" ? "text-red-400" : "warning-orange"}>
@@ -118,7 +118,7 @@ export function Terminal() {
                 onKeyDown={handleKeyDown}
                 className="w-full bg-transparent text-primary-ide border-none outline-none resize-none p-0 font-mono"
                 placeholder="Type your message here... (will be sent to WhatsApp, SMS & Email)"
-                rows={3}
+                rows={2}
               />
               <div className="flex justify-between items-center mt-2">
                 <div className="text-secondary-ide text-xs">Press Ctrl+Enter to send</div>

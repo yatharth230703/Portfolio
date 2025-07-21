@@ -53,10 +53,10 @@ const skillColors: Record<string, string> = {
 
 export default function Experience() {
   return (
-    <div className="flex-1 flex">
+    <div className="flex-1 flex h-full">
       <LineNumbers count={30} />
       
-      <div className="flex-1 p-4 overflow-y-auto">
+      <div className="flex-1 p-4 overflow-y-auto h-full">
         <CodeBlock>
           <Comment>
             <span>// Professional Experience Timeline</span><br />

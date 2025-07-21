@@ -26,10 +26,10 @@ const meetingTypes = [
 
 export default function Contact() {
   return (
-    <div className="flex-1 flex">
+    <div className="flex-1 flex h-full">
       <LineNumbers count={30} />
       
-      <div className="flex-1 p-4 overflow-y-auto">
+      <div className="flex-1 p-4 overflow-y-auto h-full">
         <CodeBlock>
           <Comment>
             <span>// Book a Call - Calendar Integration</span><br />

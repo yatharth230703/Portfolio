@@ -118,4 +118,13 @@ Preferred communication style: Simple, everyday language.
 - **Production**: Optimized bundles, error logging, static asset serving
 - **Database**: Same schema, different connection strings per environment
 
+## Recent Changes
+
+**December 21, 2025 - IDE Layout Improvements**
+- Fixed terminal footer to remain always visible at bottom of interface
+- Made sidebar and chatbot extend full height with terminal between them  
+- Replaced projects carousel with horizontal card slider and detailed expanded view
+- Ensured all page content scrolls within IDE boundaries (contained layout)
+- Backend message handling already implemented securely through Express API
+
 The application architecture supports a unique portfolio presentation that engages visitors through an interactive coding environment while maintaining professional showcase standards.

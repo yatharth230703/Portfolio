@@ -73,9 +73,9 @@ export function ChatBot() {
   }, [messages]);
 
   return (
-    <div className="w-80 bg-sidebar border-l border-ide flex flex-col">
+    <div className="w-80 bg-sidebar border-l border-ide flex flex-col h-full">
       {/* Chat Header */}
-      <div className="p-3 border-b border-ide">
+      <div className="p-3 border-b border-ide flex-shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-accent-blue rounded-full flex items-center justify-center">
             <Bot className="h-4 w-4 text-white" />
@@ -91,7 +91,7 @@ export function ChatBot() {
       </div>
       
       {/* Chat Messages */}
-      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
+      <ScrollArea className="flex-1 p-4 overflow-y-auto" ref={scrollAreaRef}>
         <div className="space-y-4">
           {messages.map((msg) => (
             <div key={msg.id} className={`flex gap-3 ${msg.isUser ? 'justify-end' : ''}`}>
@@ -128,7 +128,7 @@ export function ChatBot() {
       </ScrollArea>
       
       {/* Chat Input */}
-      <div className="p-4 border-t border-ide">
+      <div className="p-4 border-t border-ide flex-shrink-0">
         <div className="flex gap-2">
           <Input
             value={input}
