@@ -1,0 +1,885 @@
+[
+    {
+      "id": "1007727677",
+      "profileId": "ACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+      "firstName": "Yatharth",
+      "lastName": "Bisht",
+      "occupation": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+      "publicIdentifier": "yatharth-bisht-8a559b241",
+      "trackingId": "VcZw+/I2TrCL3knztHsiLA==",
+      "pictureUrl": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1713725404621?e=1754467200&v=beta&t=2qeesORoYR7tNM3ZbZGiArEc3zGWMtc5koiu04OI0Is",
+      "coverImageUrl": "https://media.licdn.com/dms/image/v2/D4D16AQHNUWPmPwnU9Q/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1723565810678?e=1756944000&v=beta&t=vHrh_KNsOf8rr6vXxiuNdnJIs7UH64C0ISFeX2cCex0",
+      "countryCode": "in",
+      "geoUrn": "urn:li:fs_geo:101884967",
+      "positions": [
+        {
+          "title": "Freelance Software Engineer",
+          "locationName": "Greater Munich Metropolitan Area",
+          "timePeriod": {
+            "startDate": {
+              "month": 5,
+              "year": 2025
+            }
+          },
+          "company": {
+            "employeeCountRange": {
+              "start": 2,
+              "end": 10
+            },
+            "industries": [
+              "Computer Software"
+            ],
+            "objectUrn": "urn:li:company:106881093",
+            "entityUrn": "urn:li:fs_miniCompany:106881093",
+            "name": "SCAILE",
+            "showcase": false,
+            "active": true,
+            "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQF-4MoHdX23zw/company-logo_100_100/B4EZg3ZRNXHoAQ-/0/1753276028198/scaile_technologies_logo?e=1756944000&v=beta&t=CUyC3t_1LFKO13FkmlkvMX2iDiLTy8dbiGfQ9bKP4DU",
+            "universalName": "scaile-technologies",
+            "dashCompanyUrn": "urn:li:fsd_company:106881093",
+            "trackingId": "nD7UeqyATXyy5g3Tirxnsg=="
+          },
+          "companyName": "SCAILE Technologies"
+        },
+        {
+          "title": "Joint Treasurer ",
+          "locationName": "New Delhi, Delhi, India",
+          "timePeriod": {
+            "startDate": {
+              "month": 1,
+              "year": 2025
+            }
+          },
+          "company": {
+            "employeeCountRange": {
+              "start": 11,
+              "end": 50
+            },
+            "industries": [
+              "Computer Software"
+            ],
+            "objectUrn": "urn:li:company:90220468",
+            "entityUrn": "urn:li:fs_miniCompany:90220468",
+            "name": "Technical Council DTU",
+            "showcase": false,
+            "active": true,
+            "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQHcDaCaJnHF7w/company-logo_200_200/company-logo_200_200/0/1673781889828?e=1756944000&v=beta&t=DC18sb5s9PAn1qulBbzMO-b3s2lv0mbqSkxaggTcyYc",
+            "universalName": "technical-council-dtu",
+            "dashCompanyUrn": "urn:li:fsd_company:90220468",
+            "trackingId": "5d5gHSNMQMG+dt2rymMgGg=="
+          },
+          "companyName": "Technical Council DTU"
+        },
+        {
+          "title": "Co Head",
+          "locationName": "New Delhi, Delhi, India",
+          "timePeriod": {
+            "startDate": {
+              "month": 8,
+              "year": 2024
+            }
+          },
+          "company": {
+            "employeeCountRange": {
+              "start": 11,
+              "end": 50
+            },
+            "industries": [
+              "Research"
+            ],
+            "objectUrn": "urn:li:company:76216286",
+            "entityUrn": "urn:li:fs_miniCompany:76216286",
+            "name": "AIMS-DTU",
+            "showcase": false,
+            "active": true,
+            "logo": "https://media.licdn.com/dms/image/v2/D560BAQEhb0kqy_mVqg/img-crop_100/img-crop_100/0/1733833451305?e=1756944000&v=beta&t=I0VAAmS_2uWizS0LGSae7PjSzhbxJwPlcj8ZbzECRpM",
+            "universalName": "aims-dtu",
+            "dashCompanyUrn": "urn:li:fsd_company:76216286",
+            "trackingId": "CAdby5HVR7CJYkEnYd3N3Q=="
+          },
+          "companyName": "AIMS-DTU"
+        },
+        {
+          "title": "President",
+          "locationName": "New Delhi, Delhi, India",
+          "timePeriod": {
+            "startDate": {
+              "month": 8,
+              "year": 2024
+            }
+          },
+          "company": {
+            "employeeCountRange": {
+              "start": 51,
+              "end": 200
+            },
+            "industries": [
+              "Nonprofit Organization Management"
+            ],
+            "objectUrn": "urn:li:company:53539636",
+            "entityUrn": "urn:li:fs_miniCompany:53539636",
+            "name": "The Indian Game Theory Society - DTU ",
+            "showcase": false,
+            "active": true,
+            "logo": "https://media.licdn.com/dms/image/v2/C560BAQHM6mlSIuEUiA/company-logo_200_200/company-logo_200_200/0/1630638966233?e=1756944000&v=beta&t=ZwNd2W-eD2eIHTlkJL5SmQLSrsZKPriDygDR4bE4zsI",
+            "universalName": "the-indian-game-theory-society-dtu",
+            "dashCompanyUrn": "urn:li:fsd_company:53539636",
+            "trackingId": "xXZschVsTOeX4+UvlfNAOg=="
+          },
+          "companyName": "The Indian Game Theory Society - DTU "
+        },
+        {
+          "title": "Joint Secretary",
+          "locationName": "New Delhi, Delhi, India",
+          "timePeriod": {
+            "startDate": {
+              "month": 8,
+              "year": 2024
+            }
+          },
+          "company": {
+            "employeeCountRange": {
+              "start": 201,
+              "end": 500
+            },
+            "industries": [
+              "Writing and Editing"
+            ],
+            "objectUrn": "urn:li:company:13760805",
+            "entityUrn": "urn:li:fs_miniCompany:13760805",
+            "name": "Sahitya, the Literary & Debating Society of DTU",
+            "showcase": false,
+            "active": true,
+            "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQESWZlT4t7Xmw/company-logo_200_200/company-logo_200_200/0/1630632073978/sahitya_the_literary_society_of_dtu_logo?e=1756944000&v=beta&t=WuINaBouuhV9Xsn0zMh7VULHRqSaZ6Q-njK13X4f7ZA",
+            "universalName": "sahitya-the-literary-society-of-dtu",
+            "dashCompanyUrn": "urn:li:fsd_company:13760805",
+            "trackingId": "tVpICIh/Qk+D/IbV2y0m0A=="
+          },
+          "companyName": "Sahitya, the Literary & Debating Society of DTU"
+        }
+      ],
+      "educations": [
+        {
+          "degreeName": "Bachelor of Technology - BTech",
+          "fieldOfStudy": "Computer Science",
+          "schoolName": "Delhi Technological University (Formerly DCE)",
+          "timePeriod": {
+            "startDate": {
+              "month": 11,
+              "year": 2022
+            }
+          }
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Kaggle intro to machine learning certification",
+          "timePeriod": {
+            "startDate": {
+              "month": 8,
+              "year": 2023
+            }
+          },
+          "authority": "Kaggle"
+        },
+        {
+          "name": "Kaggle intermediate machine learning certification ",
+          "timePeriod": {
+            "startDate": {
+              "month": 8,
+              "year": 2023
+            }
+          },
+          "authority": "Kaggle"
+        },
+        {
+          "name": "Machine Learning Specialisation",
+          "timePeriod": {
+            "startDate": {
+              "month": 1,
+              "year": 2024
+            }
+          },
+          "authority": "Coursera"
+        },
+        {
+          "name": "Deep Learning Specialisation",
+          "timePeriod": {
+            "startDate": {
+              "month": 4,
+              "year": 2024
+            }
+          },
+          "authority": "Coursera"
+        }
+      ],
+      "courses": [],
+      "honors": [],
+      "languages": [],
+      "skills": [
+        "BERT (Language Model)",
+        "Vector Databases",
+        "Skill Development",
+        "Retrieval-Augmented Generation (RAG)"
+      ],
+      "volunteerExperiences": [],
+      "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+      "summary": "🚀 AI Developer | LLMs | Full-Stack Engineer | Generative AI Enthusiast\n\nI'm a pre-final year student at DTU who's already deep in the AI game. From building detection and segmentation models 🧠 to deploying my own nano-GPT for Shakespearean verse generation 🎭, I believe in learning by building.\n\n🛠️ Interned at DraftAI (fine-tuned LLMs using HuggingFace) & SUNIC Tech (container ID recognition under CONCOR). Researched ML for smart waste segregation at IIT Delhi.\n\n🤖 Deeply passionate about GenAI — built RAG systems, fine-tuned LLMs, and created intelligent AI agents. Projects like LegalEase & OpenAPI Spec Generator showcase my ability to turn cutting-edge models into real-world tools.\n\n📱 Built LegalEase – auto-generates legal docs from minimal input. Also crafted an OpenAPI spec generator for any CRM (Gemini Long Context Challenge 🧩).\n\n💻 Full-stack dev with scraping/automation tools using Selenium, Playwright & BeautifulSoup. Backend magic with Flask, Express, NodeJS; frontend skills in HTML/CSS/JS.\n\n⚡ Also worked with Kafka for distributed streaming, Docker for deployments & Rust for high-performance modules. All about scalable, efficient engineering.\n\n📈 Currently building a startup in AI – collaborated with Langchain’s cofounder, contributed to CrewAI, and growing fast.\n\nLet’s connect & build something epic! 🌐\n📎 github.com/yatharth230703",
+      "student": false,
+      "industryName": "Higher Education",
+      "industryUrn": "urn:li:fs_industry:68",
+      "geoLocationName": "Delhi",
+      "geoCountryName": "India",
+      "jobTitle": "Freelance Software Engineer",
+      "companyName": "SCAILE Technologies",
+      "companyPublicId": "scaile-technologies",
+      "companyLinkedinUrl": "https://www.linkedin.com/company/scaile-technologies",
+      "following": false,
+      "followable": true,
+      "followersCount": 2160,
+      "connectionsCount": 500,
+      "connectionType": ""
+    }
+  ]
+
+  [
+    {
+      "urn": "7354545386675474435",
+      "full_urn": "urn:li:ugcPost:7354545274347794435",
+      "posted_at": {
+        "date": "2025-07-25 18:17:41",
+        "relative": "4 days ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1753460261029
+      },
+      "text": "Replit's recent developments of deleting a company's entire database has been surfacing lately, and I can't believe Silicon Valley called it like 6 years ago 😅 \nI, for one, feel safer about AI taking all our jobs. I don't even send an email without confirming, let alone nuking the entire backend.\n\n\nsource : https://lnkd.in/grnq5EQk",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_replits-recent-developments-of-deleting-activity-7354545386675474435-xZ56?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 15,
+        "like": 15,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 0,
+        "comments": 1,
+        "reposts": 0
+      },
+      "media": {
+        "type": "video",
+        "url": "https://dms.licdn.com/playlist/vid/v2/D5605AQHZazxbc-MENA/mp4-720p-30fp-crf28/B56ZhCX9YuHkBw-/0/1753460255561?e=1754467200&v=beta&t=xGUH2aEzIccCwfAiuLte9dOVmVz9kCXKCY0iJIeEOT0",
+        "thumbnail": "https://media.licdn.com/dms/image/v2/D5605AQHZazxbc-MENA/videocover-high/B56ZhCX9YuHkCI-/0/1753460253003?e=1754467200&v=beta&t=aegEpA5omwr5bZEXVbcgjKAavLA_j73v4c4yfsGFOBw"
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7349516617019445250",
+      "full_urn": "urn:li:activity:7349516617019445250",
+      "posted_at": {
+        "date": "2025-07-11 21:15:08",
+        "relative": "2 weeks ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1752261308913
+      },
+      "text": "🚀 Hiring for a short-term paid collaboration!\nI’m looking for someone to work with me at SCAILE Technologies on a short-term project (2-3 weeks). This is a paid opportunity and could potentially lead to future roles.\n🔍 Looking for someone with:\n\u003EHands-on experience in browser automation\n\u003EProficiency in both JavaScript and Python\n\u003EExperience with Playwright (Selenium/Puppeteer also acceptable)\n\u003EFamiliarity with AI agents beyond just chatbot frameworks – actual tools and orchestration\n\u003EFamiliarity with browser-use is a big plus\n📬 If you or someone you know fits the bill, please send your resume to yatharth@scaile.tech\nPS: I’ll be using a custom AI automation tool that I made to parse incoming resumes – so if you can be a bit creative in how you format yours, I’d love to see that 💫",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_hiring-for-a-short-term-paid-collaboration-activity-7349516617019445250-ZyzV?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 26,
+        "like": 22,
+        "support": 2,
+        "love": 2,
+        "insight": 0,
+        "celebrate": 0,
+        "comments": 2,
+        "reposts": 0
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7319872646345560064",
+      "full_urn": "urn:li:ugcPost:7319872553575923712",
+      "posted_at": {
+        "date": "2025-04-21 02:00:35",
+        "relative": "3 months ago • Edited • Visible to anyone on or off LinkedIn",
+        "timestamp": 1745193635546
+      },
+      "text": "🚀 Just launched: Open_PDF2Brainrot — The Free, Open‑Source PDF→Brainrot Converter! \nExams are approaching fast , and I wanted to try the viral PDF to Brainrot microlearning technique. But all the popular tools? Behind steep paywalls. 💸\nSo… I decided to build my own; and I’m sharing it with everyone. Say hello to: Open_PDF2Brainrot 🎉\nWhat it does:\n ✅ Upload any PDF (≤25 pages recommended if Gemini API key is free tier)\n ✅ Auto‑generate clean, structured JSON flashcards 📑\n ✅ Turn them into short, punchy Brainrot videos 🎥\n ✅ Browse everything in a slick, responsive web UI 🌐\n ✅ Navigate flashcards + videos like a social feed 🔁\nTech Stack Highlights:\n ⚙️ Python + Django backend\n 📄 PyPDF2 for parsing your PDF\n 🎞 MoviePy + Vosk + kokoro TTS for generating videos\n 💡 Gemini API for content generation 🤖\n\n📢 Check it out, fork it, break it, improve it — it's ours! \n🔗 https://lnkd.in/g-KCZH3s\n#OpenSource #Python #Django #StudyTools #EdTech #PDF2Brainrot #MachineLearning #GeminiAI #Exams #Microlearning #DeveloperLife #StudentTools",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_opensource-python-django-activity-7319872646345560064-Sbwo?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 38,
+        "like": 33,
+        "support": 0,
+        "love": 3,
+        "insight": 0,
+        "celebrate": 0,
+        "comments": 4,
+        "reposts": 0
+      },
+      "media": {
+        "type": "video",
+        "url": "https://dms.licdn.com/playlist/vid/v2/D5605AQFW-5sBAqMykQ/mp4-720p-30fp-crf28/B56ZZVpTaeHQBY-/0/1745193633910?e=1754467200&v=beta&t=QlhizJ6Lobfv_2UMDLIuPZi2hKZoh-Lo8T9rFLToRRc",
+        "thumbnail": "https://media.licdn.com/dms/image/v2/D5605AQFW-5sBAqMykQ/videocover-high/B56ZZVpTaeHQBk-/0/1745193627230?e=1754467200&v=beta&t=q8cqUtOrgyYe0_YQyItm-fuqXN1JKmWFVxK1btJ0TxI"
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7295198850829402112",
+      "full_urn": "urn:li:activity:7295198850829402112",
+      "posted_at": {
+        "date": "2025-02-11 22:55:44",
+        "relative": "5 months ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1739310944278
+      },
+      "text": "I’m happy to share that I’m starting a new position as an AI Agent Engineering & Marketing Communications Intern at New Native! Excited to get to work alongside the team at the lablab.ai platform. 💫  ✨",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_im-happy-to-share-that-im-starting-a-new-activity-7295198850829402112-7hAu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 27,
+        "like": 26,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 1,
+        "comments": 0,
+        "reposts": 0
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7290759184894070784",
+      "full_urn": "urn:li:activity:7290759184894070784",
+      "posted_at": {
+        "date": "2025-01-30 16:54:05",
+        "relative": "5 months ago • Edited • Visible to anyone on or off LinkedIn",
+        "timestamp": 1738252445434
+      },
+      "text": "Greetings connections ! Thrilled to share that I got selected to attend the Research and Innovation Symposium in Computing (RISC 2025) at Indian Institute of Technology, Bombay organized by CSE at IIT Bombay .\n\nIf you're also attending—especially from Delhi—let’s connect!\nLooking forward to an amazing experience. 🎯\n\n\n#RISC2025 #IITBombay #Computing #Innovation #Research #Networking #TechCommunity #MachineLearning #ArtificialIntelligence #ComputerScience",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_risc2025-iitbombay-computing-activity-7290759184894070784-mVTx?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 43,
+        "like": 42,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 1,
+        "comments": 3,
+        "reposts": 0
+      },
+      "media": {
+        "type": "image",
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQE6IMuqCY4OLw/feedshare-shrink_2048_1536/B56ZS362AXGQAo-/0/1738252444409?e=1756944000&v=beta&t=xZWkzZWav84xuYoQN3OqjT5dyBWt2UZ0np2yTs9IhYw",
+        "images": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D5622AQE6IMuqCY4OLw/feedshare-shrink_2048_1536/B56ZS362AXGQAo-/0/1738252444409?e=1756944000&v=beta&t=xZWkzZWav84xuYoQN3OqjT5dyBWt2UZ0np2yTs9IhYw",
+            "width": 904,
+            "height": 396
+          }
+        ]
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7264381455290486784",
+      "full_urn": "urn:li:ugcPost:7264381453927403520",
+      "posted_at": {
+        "date": "2024-11-18 21:58:24",
+        "relative": "8 months ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1731963504622
+      },
+      "text": "🚀 Leveraging Gemini's Long Context Window to Revolutionize OpenAPI Specification Generation 🎉\n\nExcited to share my submission for the Google Long Context Competition on Kaggle! \nIn this project, I explored how Generative AI, powered by Gemini's long-context capabilities, can streamline the creation of OpenAPI specifications for CRMs. 🚀\nOpenAPI specs are crucial for standardizing APIs, enabling seamless integrations, and enhancing developer productivity. 🛠️📈 However, crafting them manually can be tedious and error-prone. 😓📄\nThis approach showcases how AI-driven solutions can revolutionize the way we handle complex technical documentation, making processes faster and more efficient. ⚡🤖\n\nIn order to optimize Gemini's performance and utilize it's long context memory, I focused on the following areas :\n--\u003EContext Caching 💾\n--\u003EMany-Shot Prompting 📃\n--\u003EIn-Context Retrieval 📂\n\nMy submission for the Google Long Context Competition on Kaggle builds upon these explorations. It focuses on two key areas:\n\nPart 1: Online Documentation Q&A: I leveraged Gemini's ability to process up to 2 million tokens to enable powerful Q&A directly from online documentation. By incorporating context caching 💾, I significantly improved response times and user experience, making technical information far more accessible. 👍\n\nPart 2: Generating OpenAPI Specifications: The core of my project involved using Gemini to automatically generate OpenAPI specifications from existing API documentation. This is particularly impactful for platforms like CRMs (Customer Relationship Management tools) which often have thousands of lines of documentation. Manually converting this is slow 🐌, error-prone ⚠️, and costly 💸. Gemini's long context window allows the model to process the entire documentation at once, dramatically improving the accuracy and speed of OpenAPI generation.  ✨\n\n🔗 Check out the notebook here: \nhttps://lnkd.in/dEZ4N9y7\n\nI’d love your support and feedback! Let me know your thoughts or ideas for improvement. 💡",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_leveraging-geminis-long-context-window-activity-7264381455290486784-9mzS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 28,
+        "like": 27,
+        "support": 0,
+        "love": 0,
+        "insight": 1,
+        "celebrate": 0,
+        "comments": 0,
+        "reposts": 0
+      },
+      "media": {
+        "type": "images",
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQGDgSMcOrFO_Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1731963502506?e=1756944000&v=beta&t=diFeIW7aFIw3nWkeryu0I7GDkLnu6fUH0TD_BpFIc3g",
+        "images": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQGDgSMcOrFO_Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1731963502506?e=1756944000&v=beta&t=diFeIW7aFIw3nWkeryu0I7GDkLnu6fUH0TD_BpFIc3g",
+            "width": 1206,
+            "height": 723
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQEU6SC0r6XX-Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1731963502230?e=1756944000&v=beta&t=pNoYK-lbxpV6OmudicjNPktKVTLpLNcMfNO2ZII-cyQ",
+            "width": 356,
+            "height": 573
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQG0X0MdnxLkfw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1731963502328?e=1756944000&v=beta&t=-t4QnUct98hf0wPWXVdCnXPt5TxW_K113SmJyEfzgxk",
+            "width": 883,
+            "height": 812
+          }
+        ]
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7256319498121551872",
+      "full_urn": "urn:li:activity:7256319498121551872",
+      "posted_at": {
+        "date": "2024-10-27 16:03:04",
+        "relative": "9 months ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1730041384249
+      },
+      "text": "Glad to share that I am starting a new position as Software Engineering Intern at Cobalt.",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_glad-to-share-that-i-am-starting-a-new-position-activity-7256319498121551872-vQB0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 50,
+        "like": 48,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 2,
+        "comments": 11,
+        "reposts": 0
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7252759449705066496",
+      "full_urn": "urn:li:ugcPost:7252692366879301632",
+      "posted_at": {
+        "date": "2024-10-17 21:16:42",
+        "relative": "9 months ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1729192602564
+      },
+      "text": "🎉 Proud to share that my teammate Yatharth Bisht and I were selected for the state-level round of the prestigious RBI 90 Quiz, a nationwide competition for undergraduate students celebrating the 90th anniversary of the Reserve Bank of India's (RBI) operations since it was established by the RBI Act in 1934! 🎓🇮🇳\n\nAfter successfully clearing the first online round, we had the incredible opportunity to compete at The Hyatt Regency, alongside 67 other talented teams. Though we didn’t make it to the next round, the experience was invaluable! 🙌\n\nThe quiz challenged us with questions on: 📖 History\n🌍 General Knowledge\n📊 Economics\n🏦 The history of the RBI itself!\n\nTo top it all off, we had the great honor of meeting and listening to stories of some of the top-level executives of RBI and various public sector banks! 🙏\n\nWhat we gained: ✔️ A wealth of knowledge and insight into fascinating topics\n✔️ A great learning experience about teamwork and competition 📚\n✔️ Enjoyed a delicious lunch 🍽️ and collected some cool goodies 🎁\n\nGrateful for the journey and the chance to be part of this special event! Onwards and upwards! 🚀\n\n#RBI90Quiz #ReserveBankOfIndia #LearningExperience #History #Economics #Competition #Gratitude #NeverStopLearning",
+      "url": "https://www.linkedin.com/posts/yash-jain-408383253_rbi90quiz-reservebankofindia-learningexperience-ugcPost-7252692366879301632-RWYl?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "repost",
+      "author": {
+        "first_name": "Yash",
+        "last_name": "Jain",
+        "headline": "Computer Science Undergrad at Delhi Technological University (Formerly DCE) | AI/ML and Finance Enthusiast",
+        "username": "yash-jain-408383253",
+        "profile_url": "https://www.linkedin.com/in/yash-jain-408383253?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAD6GcogBalVdT9s3Q7bgjOPpeAdEXH9vMVk",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D4D03AQHdWVIiNqdUqA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719925592875?e=1756944000&v=beta&t=zjgyxEZNgf4BKGh2ikZ2CkgtXttn_jP2gWEbgEKAH3w"
+      },
+      "stats": {
+        "total_reactions": 38,
+        "like": 36,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 2,
+        "comments": 3,
+        "reposts": 1
+      },
+      "media": {
+        "type": "images",
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQHfhrozCkWDJg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729176606553?e=1756944000&v=beta&t=kudipv9VepylEs5WOjykd7KhO_ZIr73f4BUnXb7N3lM",
+        "images": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQHfhrozCkWDJg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729176606553?e=1756944000&v=beta&t=kudipv9VepylEs5WOjykd7KhO_ZIr73f4BUnXb7N3lM",
+            "width": 1600,
+            "height": 1204
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQFzbFv8XVZKGg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729176606262?e=1756944000&v=beta&t=stufwUYmNkjTbru7dp8jerOcdeLBvvziy2DCVqpXqB0",
+            "width": 1280,
+            "height": 576
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQGVXvxnjryNWw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729176606286?e=1756944000&v=beta&t=tI4qmarq0nOJU5sGNz6fW1cY7lcD_CyWuzA9WPMhb7c",
+            "width": 1280,
+            "height": 576
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQHPjJCn0Bubdw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729176606482?e=1756944000&v=beta&t=qqg4A851XmhGgPQZI2lMYFgQRybYadA7yRSUf292q5I",
+            "width": 1600,
+            "height": 1204
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D4D22AQHnEKr48KrDXw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729176606308?e=1756944000&v=beta&t=g5ztv8Rs1DwEgIhT0xrwfVGyerNhiDlEwzOz7ndQJRc",
+            "width": 1280,
+            "height": 576
+          }
+        ]
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7249298758545350657",
+      "full_urn": "urn:li:ugcPost:7249298757941354497",
+      "posted_at": {
+        "date": "2024-10-08 08:05:09",
+        "relative": "9 months ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1728367509495
+      },
+      "text": "It was a rewarding experience indeed🌟! I learned a lot throughout the challenge, and it was exciting to see our approach stand out among LLM-based solutions. Despite the hurdles, we pushed through and gained valuable insights, making the journey truly worthwhile. Looking forward to more challenges like this!💖💫",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_hackthon-amazon-ml-activity-7249298758545350657-05WA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "quote",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 4,
+        "like": 4,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 0,
+        "comments": 0,
+        "reposts": 0
+      },
+      "reshared_post": {
+        "urn": "7248634843662573568",
+        "posted_at": {
+          "date": "2024-10-06 12:06:59",
+          "relative": "9 months ago • Edited • Visible to anyone on or off LinkedIn",
+          "timestamp": 1728209219852
+        },
+        "text": "135th rank in Amazon Challenge without LLM??\n\nSuccess isn’t always about taking first place—it’s about pushing boundaries and learning along the way. A few weeks ago me and my team, HackWayne comprising of Rhytham Aggarwal, Yatharth Bisht and Ishan Srivastava  participated in the Amazon ML Challenge and ranked 135th out of over 700,000 participants and 2,000+ successful submissions.\n\nI’m sure you all have seen many posts on this challenge that typically make use of an LLM with OCR, reaching around 50-60% accuracy. However, our team developed a model without using any LLM, managing to achieve an accuracy of 50.4%. The task required us to handle 130,000 images in the test dataset, and processing them without a high-speed GPU was time-consuming, which became the biggest bottleneck.\n\nOur Approach:\nWe divided the images into 30 patches using variable-sized branches, ensuring that maximum information was captured. Each patch was passed through Paddle OCR to check for the presence of text, and we extracted only relevant quantities and units (e.g., all weights in an image for weight entitiy). This transformed the problem into a classification task: given all the possible quantities present in the image, which one is the correct answer? We approached this using Gradient Boosting (XGB) classifiers for each of the eight quantities.\n\nWe found that for quantities like weight, wattage, and voltage, the classifier achieved high accuracy since they are easier to reason it (For weight, the weight of whole will always be more than that of it's components). However, it struggled with length, width, and height, which eventually became the bottleneck, reducing the overall accuracy to 50.4%.\n\nDespite its pitfalls, the fact that this idea stood out among a pool of LLM-based solutions is a testament to its potential and how much it can be improved with more time and computing resources.\n\nThe hackathon was a fantastic experience, helping me learn a lot while balancing sleep and time management. It was an exciting experience, and I’m looking forward to more hackathons like this!\n\n#hackthon #amazon #ml #challenge",
+        "url": "https://www.linkedin.com/posts/divij-mahajan-73b17b250_hackthon-amazon-ml-activity-7248634843662573568-7dq2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+        "post_type": "regular",
+        "author": {
+          "first_name": "Divij",
+          "last_name": "Mahajan",
+          "headline": "5x hackathons winner | Apple Swift Student Challenge Winner'25 | SUI Overflow University Award | React/Next Developer | ML Developer | Blockchain Developer | DTU'26 | CSE ||",
+          "username": "divij-mahajan-73b17b250",
+          "profile_url": "https://www.linkedin.com/in/divij-mahajan-73b17b250?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAD32EV8B1Kf-c4GlAA_m_W6yN9mdv1662lU",
+          "profile_picture": "https://media.licdn.com/dms/image/v2/D5603AQH6h8_5K1HGFA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714338272058?e=1756944000&v=beta&t=UBRaD1a90jmyaF3DCmpnjz_LNJWO_gY9aStTWKl4TLE"
+        },
+        "stats": {
+          "total_reactions": 0,
+          "like": 0,
+          "support": 0,
+          "love": 0,
+          "insight": 0,
+          "celebrate": 0,
+          "comments": 0,
+          "reposts": 0
+        },
+        "media": {
+          "type": "images",
+          "url": "https://media.licdn.com/dms/image/v2/D5622AQGEGFcYlipxpA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1728209217437?e=1756944000&v=beta&t=AAB9Eo49ueBRplL1pXKON7Nyovdbz7WOAgoVceeEw6M",
+          "images": [
+            {
+              "url": "https://media.licdn.com/dms/image/v2/D5622AQGEGFcYlipxpA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1728209217437?e=1756944000&v=beta&t=AAB9Eo49ueBRplL1pXKON7Nyovdbz7WOAgoVceeEw6M",
+              "width": 1257,
+              "height": 442
+            },
+            {
+              "url": "https://media.licdn.com/dms/image/v2/D5622AQGQsqBa12O57w/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1728209217350?e=1756944000&v=beta&t=j_5_Oz9LAWqgUIbb1oexIQSf6qfkNBfjzDhyoLPLmyg",
+              "width": 1203,
+              "height": 410
+            }
+          ]
+        }
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7225413740135923713",
+      "full_urn": "urn:li:ugcPost:7225413739489939456",
+      "posted_at": {
+        "date": "2024-08-03 10:14:37",
+        "relative": "11 months ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1722672877344
+      },
+      "text": "I’m happy to share that I’m starting a new position as Research Intern at Indian Institute of Technology, Delhi!",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_im-happy-to-share-that-im-starting-a-new-activity-7225413740135923713-msGh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 48,
+        "like": 44,
+        "support": 1,
+        "love": 1,
+        "insight": 0,
+        "celebrate": 2,
+        "comments": 6,
+        "reposts": 0
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7212171848036274176",
+      "full_urn": "urn:li:activity:7212171848036274176",
+      "posted_at": {
+        "date": "2024-06-27 21:16:04",
+        "relative": "1 year ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1719515764245
+      },
+      "text": "🚀 Excited to share my first article on Medium, \"GAN Inversion: RE-viewing the Image\"! 🌟 This piece dives into the fascinating world of GAN inversion, exploring how it revolutionizes image editing by manipulating the latent vectors.\nI hope this becomes the first of many articles that I publish, as I progress on my journey to learn more about Artificial Intelligence and Machine Learning 🤖 🙌\nI would love to hear from the LinkedIn community on how I can imrove. Check it out and share your thoughts!",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_gan-inversion-re-viewing-the-image-activity-7212171848036274176-TZLl?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 19,
+        "like": 19,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 0,
+        "comments": 1,
+        "reposts": 0
+      },
+      "media": {
+        "type": "image",
+        "url": "https://media.licdn.com/dms/image/sync/v2/D5627AQEtL0CGOG3Jbw/articleshare-shrink_800/articleshare-shrink_800/0/1753860148664?e=1754467200&v=beta&t=2X1NeBK962YXUBh5f2HXezMCXfqojjflU9ylcIbQ8xQ"
+      },
+      "article": {
+        "url": "https://link.medium.com/Io6KYHzfMKb",
+        "title": "GAN Inversion : RE-viewing the image",
+        "subtitle": "link.medium.com",
+        "thumbnail": "https://media.licdn.com/dms/image/sync/v2/D5627AQEtL0CGOG3Jbw/articleshare-shrink_800/articleshare-shrink_800/0/1753860148664?e=1754467200&v=beta&t=2X1NeBK962YXUBh5f2HXezMCXfqojjflU9ylcIbQ8xQ"
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7208807366048247808",
+      "full_urn": "urn:li:ugcPost:7208807365050077185",
+      "posted_at": {
+        "date": "2024-06-18 14:26:49",
+        "relative": "1 year ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1718713609230
+      },
+      "text": "Greetings Connections! ✨✨\nI am pleased to share that I have began my summer internship at SUNIC Technologies , contracted under Container Corporation of India Ltd , working towards integrating Artificial Intelligence into the current structure of their organisation.🚀🚀",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_greetings-connections-i-am-pleased-to-activity-7208807366048247808-2zYx?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 30,
+        "like": 26,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 4,
+        "comments": 4,
+        "reposts": 0
+      },
+      "media": {
+        "type": "images",
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQFpVCCK2NVxqA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1718713603867?e=1756944000&v=beta&t=TlkPj7rcoF_Lshfiyhs1NW-cKhnntMRS8H6FuI-l1GM",
+        "images": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D5622AQFpVCCK2NVxqA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1718713603867?e=1756944000&v=beta&t=TlkPj7rcoF_Lshfiyhs1NW-cKhnntMRS8H6FuI-l1GM",
+            "width": 2040,
+            "height": 1536
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D5622AQHBSjOO5r0hxQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1718713607365?e=1756944000&v=beta&t=k-82ki8uPHzJ7qcofZetwOe1aWMvvcnQ8Fp6y-El4UQ",
+            "width": 2040,
+            "height": 1536
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D5622AQFuZc1w0DxoHw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1718713604583?e=1756944000&v=beta&t=RiC-WTx-2zpxrwhEuxGJJtIPVxwrh5EXDB-htVAn3-8",
+            "width": 2040,
+            "height": 1536
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D5622AQH_l5q-vE_1Lg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1718713603402?e=1756944000&v=beta&t=Q4wYsDQpunI17LT9DphBpXeXAorPKuIOpJGOqvXNkaA",
+            "width": 2040,
+            "height": 1536
+          }
+        ]
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7194467565149040640",
+      "full_urn": "urn:li:activity:7194467565149040640",
+      "posted_at": {
+        "date": "2024-05-10 00:45:34",
+        "relative": "1 year ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1715294734275
+      },
+      "text": "As of April 2024, I have successfully completed a two-month internship at DraftAi , where I had the incredible opportunity to dive deep into the world of machine learning.\nDuring this enriching journey from February to April, I worked hands-on with cutting-edge technologies and tools. Here are some of the highlights:\n🔍 Key Technical Learnings:\n1. Mastered the use of Hugging Face Inference APIs, allowing me to deploy and manage AI models efficiently.\n2. Gained proficiency with OLLAMA and local LLMs, enhancing my skills in managing and implementing large language models.\n3 .Acquired substantial experience in fine-tuning and testing large language models, which deepened my understanding of AI's capabilities and limitations.\n🌱 Non-Technical Growth:\n1. Adapted to a hybrid work environment, learning to navigate the complexities of remote and in-person collaborations.\n2. Enhanced my skills in technical documentation, which is crucial for clear and effective communication.\n3. Improved my ability to organize and prioritize technical tasks, ensuring productivity and efficiency in a fast-paced environment.\n\nA special shout-out to 🏫 AIMS-DTU for providing the foundational knowledge and skills that prepared me for this role; and without their support my journey from having zero knowledge about Python to grabbing my first ever technical internship would have not been possible \nI am grateful for this opportunity to grow professionally and personally at DraftAi. \n:\n:\n🚀 Looking forward to applying these learnings in future challenges and opportunities!",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_as-of-april-2024-i-have-successfully-completed-activity-7194467565149040640-XLrC?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 24,
+        "like": 23,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 1,
+        "comments": 3,
+        "reposts": 0
+      },
+      "media": {
+        "type": "image",
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGjZKxxCDHsgw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1715294733465?e=1756944000&v=beta&t=LQ6p9abm9BHi3Jgc7FmiE4-bsDeuYFtOBoVT-SAWBZ0",
+        "images": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D5622AQGjZKxxCDHsgw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1715294733465?e=1756944000&v=beta&t=LQ6p9abm9BHi3Jgc7FmiE4-bsDeuYFtOBoVT-SAWBZ0",
+            "width": 912,
+            "height": 648
+          }
+        ]
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7189373924579635200",
+      "full_urn": "urn:li:ugcPost:7189373923866640384",
+      "posted_at": {
+        "date": "2024-04-25 23:25:15",
+        "relative": "1 year ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1714080315728
+      },
+      "text": "🎉 Thrilled to announce that I have completed the Deep Learning Specialization from DeepLearning.AI via Coursera! This demanding program included five detailed courses, each aimed at expanding my abilities and understanding in AI and machine learning:\nNeural Networks and Deep Learning\nImproving Deep Neural Networks: Hyperparameter tuning, Regularization, and Optimization\nStructuring Machine Learning Projects\nConvolutional Neural Networks\nSequence Models\n\nI want to extend a heartfelt thank you to my mentors and peers at AIMS-DTU for their invaluable support and motivation throughout this experience. Your guidance was crucial in helping me navigate this challenging and rewarding journey.\nExcited for what's next and committed to furthering our understanding and capabilities in AI!\n#DeepLearning #MachineLearning #AI #Coursera #DeepLearningAI #DataScience #ArtificialIntelligence #TechEducation",
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_deeplearning-machinelearning-ai-activity-7189373924579635200-v1bp?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 10,
+        "like": 8,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 1,
+        "comments": 3,
+        "reposts": 0
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    },
+    {
+      "urn": "7145339537680924672",
+      "full_urn": "urn:li:activity:7145339537680924672",
+      "posted_at": {
+        "date": "2023-12-26 10:08:19",
+        "relative": "1 year ago • Visible to anyone on or off LinkedIn",
+        "timestamp": 1703581699772
+      },
+      "url": "https://www.linkedin.com/posts/yatharth-bisht-8a559b241_my-yearly-stats-activity-7145339537680924672-w8aw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF04lucBredltG9kvoOCN1omGWdL_yqlUPw",
+      "post_type": "regular",
+      "author": {
+        "first_name": "Yatharth",
+        "last_name": "Bisht",
+        "headline": "Freelance Software Developer / Student •ex-Intern @NewNative • @Cobalt • @IIT Delhi • Joint-Treasurer Technical Council DTU • President @IGTS-DTU • Co-head @AIMS-DTU • DTU CSE(26)",
+        "username": "yatharth-bisht-8a559b241",
+        "profile_url": "https://www.linkedin.com/in/yatharth-bisht-8a559b241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwQtD0B3rxZE3u_fkL47_VAa65iCPt5rgY",
+        "profile_picture": "https://media.licdn.com/dms/image/v2/D5635AQEdD3n6Qufpjw/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1713725404621?e=1754467200&v=beta&t=31f_OMX2kmbSYuExMpQfVQO3cxAQ8xnSglRyGUWMvrc"
+      },
+      "stats": {
+        "total_reactions": 9,
+        "like": 9,
+        "support": 0,
+        "love": 0,
+        "insight": 0,
+        "celebrate": 0,
+        "comments": 0,
+        "reposts": 0
+      },
+      "media": {
+        "type": "image",
+        "url": "https://media.licdn.com/dms/image/sync/v2/D5627AQHIqAm32o5acw/articleshare-shrink_800/articleshare-shrink_800/0/1712212191964?e=1754467200&v=beta&t=P_zCB6112WwwKUrW7C4ePdQA7AgH9mv4yZgXmJDVkjI"
+      },
+      "article": {
+        "url": "https://students.codingninjas.com/share/image?redirect_to=https%3A%2F%2Fwww.codingninjas.com%2Fstudio%2Fhome&url=https%3A%2F%2Fcertificate.codingninjas.com%2Fcertificate%2F816487fb64e6b891%2FYearlyStats&title=My+Yearly+Stats&utm_campaign=yearly_stats&utm_medium=Desktop&description=&uuid=3685cd88-ce78-4aa1-8470-4b3dbb66ae80&utm_source=linkedin",
+        "title": "My Yearly Stats",
+        "subtitle": "students.codingninjas.com",
+        "thumbnail": "https://media.licdn.com/dms/image/sync/v2/D5627AQHIqAm32o5acw/articleshare-shrink_800/articleshare-shrink_800/0/1712212191964?e=1754467200&v=beta&t=P_zCB6112WwwKUrW7C4ePdQA7AgH9mv4yZgXmJDVkjI"
+      },
+      "pagination_token": "dXJuOmxpOmFjdGl2aXR5OjcxNDUzMzk1Mzc2ODA5MjQ2NzItMTcwMzU4MTY5OTc0Mg=="
+    }
+  ]
