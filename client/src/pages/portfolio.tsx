@@ -7,13 +7,11 @@ import { ChatBot } from "@/components/ide/chatbot";
 import Personal from "./personal";
 import Projects from "./projects";
 import Experience from "./experience";
-import Contact from "./contact";
 
 const files = [
   { name: "1_personal.rs", path: "personal", icon: "rust" as const },
   { name: "2_projects.py", path: "projects", icon: "python" as const },
   { name: "3_experience.cpp", path: "experience", icon: "cpp" as const },
-  { name: "4_book_a_call.js", path: "contact", icon: "javascript" as const },
 ];
 
 export default function Portfolio() {
@@ -57,8 +55,6 @@ export default function Portfolio() {
         return <Projects />;
       case "experience":
         return <Experience />;
-      case "contact":
-        return <Contact />;
       default:
         return <Personal />;
     }

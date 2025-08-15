@@ -5,6 +5,7 @@ import { insertMessageSchema, insertChatMessageSchema } from "@shared/schema";
 import { z } from "zod";
 import { Groq } from 'groq-sdk';
 import path from 'path';
+import { SocialMediaService } from "./socialMediaService";
 
 // Function to get Groq client (will be called after dotenv loads)
 function getGroqClient() {
@@ -51,34 +52,56 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.sendFile(path.resolve(import.meta.dirname, '..', 'client', 'public', 'ai_context_resume.json'));
   });
   
-  // Send message via terminal (Resend + Twilio integration)
+  // Send message via terminal (Resend + Twilio + Slack integration)
   app.post("/api/messages", async (req, res) => {
     try {
       const messageData = insertMessageSchema.parse(req.body);
       const message = await storage.createMessage(messageData);
       
-      // TODO: Integrate with Resend API for email
-      const resendApiKey = process.env.RESEND_API_KEY || process.env.RESEND_KEY || "";
-      
-      // TODO: Integrate with Twilio for SMS/WhatsApp
-      const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID || "";
-      const twilioAuthToken = process.env.TWILIO_AUTH_TOKEN || "";
+      // Get visitor information
+      const visitorInfo = {
+        ip: (req.ip || req.connection.remoteAddress || req.headers['x-forwarded-for'] || 'Unknown') as string,
+        userAgent: req.headers['user-agent'] || 'Unknown'
+      };
       
       try {
-        // Simulate API calls - in production, implement actual API calls
-        console.log("Sending message via Resend:", messageData.content);
-        console.log("Sending message via Twilio:", messageData.content);
+        // Initialize social media service and send to all platforms
+        const socialMediaService = new SocialMediaService();
+        const results = await socialMediaService.sendToAllPlatforms(messageData.content, visitorInfo);
         
-        await storage.updateMessageStatus(message.id, "sent");
+        // Log results
+        console.log("Social media sending results:", results);
         
-        res.json({ 
-          success: true, 
-          message: "Message sent successfully to WhatsApp, SMS, and Email",
-          id: message.id 
-        });
+        // Count successful and failed sends
+        const successfulSends = results.filter(r => r.success);
+        const failedSends = results.filter(r => !r.success);
+        
+        if (successfulSends.length > 0) {
+          await storage.updateMessageStatus(message.id, "sent");
+          
+          res.json({ 
+            success: true, 
+            message: `Message sent successfully to ${successfulSends.length} platform(s)`,
+            results: results,
+            successfulCount: successfulSends.length,
+            failedCount: failedSends.length,
+            id: message.id 
+          });
+        } else {
+          await storage.updateMessageStatus(message.id, "failed");
+          res.status(500).json({ 
+            error: "Failed to send message to any platform",
+            results: results 
+          });
+        }
+        
       } catch (error) {
         await storage.updateMessageStatus(message.id, "failed");
-        throw error;
+        console.error("Error in social media service:", error);
+        res.status(500).json({ 
+          error: "Failed to send message",
+          details: error instanceof Error ? error.message : "Unknown error"
+        });
       }
       
     } catch (error) {
