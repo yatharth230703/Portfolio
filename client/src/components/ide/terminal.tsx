@@ -31,50 +31,72 @@ export function Terminal() {
       const response = await apiRequest("POST", "/api/messages", data);
       return response.json();
     },
-    onSuccess: (data) => {
+    onSuccess: async (data) => {
       const timestamp = new Date().toLocaleTimeString();
-      const newMessages: TerminalMessage[] = [
-        {
-          timestamp,
-          content: message,
-          type: "sent"
-        }
-      ];
-
-      // Add platform-specific status messages
+      
+      // First, show only the sent message
+      const sentMessage: TerminalMessage = {
+        timestamp,
+        content: message,
+        type: "sent"
+      };
+      
+      // Clear previous messages and show only sent message
+      setMessages([sentMessage]);
+      setMessage("");
+      
+      // Wait a moment before starting confirmations
+      await new Promise(resolve => setTimeout(resolve, 800));
+      
+      // Add platform-specific status messages one by one
       if (data.results && Array.isArray(data.results)) {
-        data.results.forEach((result: any) => {
-          newMessages.push({
+        const updatedMessages = [sentMessage];
+        
+        // Add each platform status with delay
+        for (let i = 0; i < data.results.length; i++) {
+          const result = data.results[i];
+          const platformMessage: TerminalMessage = {
             timestamp,
             content: `${result.success ? '✓' : '✗'} ${result.platform}: ${result.message}`,
             type: "platform",
             platform: result.platform,
             success: result.success
-          } as TerminalMessage);
-        });
+          };
+          
+          updatedMessages.push(platformMessage);
+          setMessages([...updatedMessages]);
+          
+          // Wait before next platform (0.6-1.2 seconds)
+          await new Promise(resolve => setTimeout(resolve, 600 + Math.random() * 600));
+        }
         
-        // Add summary message
+        // Add summary message after all platforms
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
         const successCount = data.successfulCount || 0;
         const totalCount = data.results?.length || 0;
         if (successCount > 0) {
-          newMessages.push({
+          const summaryMessage: TerminalMessage = {
             timestamp,
             content: `✓ Message sent to ${successCount}/${totalCount} platforms (Email, SMS, WhatsApp & Slack)`,
             type: "status"
-          } as TerminalMessage);
+          };
+          
+          updatedMessages.push(summaryMessage);
+          setMessages([...updatedMessages]);
         }
       } else {
         // Fallback for backward compatibility
-        newMessages.push({
-          timestamp,
-          content: "✓ Message forwarded to all platforms",
-          type: "status"
-        } as TerminalMessage);
+        await new Promise(resolve => setTimeout(resolve, 800));
+        setMessages([
+          sentMessage,
+          {
+            timestamp,
+            content: "✓ Message forwarded to all platforms",
+            type: "status"
+          } as TerminalMessage
+        ]);
       }
-
-      // Replace all previous messages with new ones (clear history)
-      setMessages(newMessages);
-      setMessage("");
     },
     onError: (error) => {
       const timestamp = new Date().toLocaleTimeString();
