@@ -52,6 +52,17 @@ export function Terminal() {
             success: result.success
           } as TerminalMessage);
         });
+        
+        // Add summary message
+        const successCount = data.successfulCount || 0;
+        const totalCount = data.results?.length || 0;
+        if (successCount > 0) {
+          newMessages.push({
+            timestamp,
+            content: `✓ Message sent to ${successCount}/${totalCount} platforms (Email, SMS, WhatsApp & Slack)`,
+            type: "status"
+          } as TerminalMessage);
+        }
       } else {
         // Fallback for backward compatibility
         newMessages.push({
@@ -61,40 +72,20 @@ export function Terminal() {
         } as TerminalMessage);
       }
 
-      setMessages(prev => [...prev, ...newMessages]);
+      // Replace all previous messages with new ones (clear history)
+      setMessages(newMessages);
       setMessage("");
-      
-      const successCount = data.successfulCount || 0;
-      const totalCount = data.results?.length || 0;
-      
-      if (successCount > 0) {
-        toast({
-          title: "Message sent successfully",
-          description: `Message sent to ${successCount}/${totalCount} platforms.`,
-        });
-      } else {
-        toast({
-          title: "Message failed",
-          description: "Failed to send message to any platform.",
-          variant: "destructive",
-        });
-      }
     },
     onError: (error) => {
       const timestamp = new Date().toLocaleTimeString();
-      setMessages(prev => [
-        ...prev,
+      // Clear previous messages and show only error
+      setMessages([
         {
           timestamp,
           content: `✗ Failed to send message: ${error.message}`,
           type: "error"
         }
       ]);
-      toast({
-        title: "Failed to send message",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
     }
   });
 
@@ -200,30 +191,10 @@ export function Terminal() {
             <span className="success-green">portfolio@dev:~$</span>
             <span className="text-primary-ide ml-1">Send me a message directly!</span>
           </div>
-          <div className="text-secondary-ide">// Terminal connects to Resend API + Twilio + Slack</div>
-          
-          {/* Terminal Output */}
-          <div className="space-y-0.5 mt-2 max-h-8 overflow-y-auto">
-            {messages.map((msg, index) => (
-              <div key={index} className="text-secondary-ide text-xs">
-                <span className={
-                  msg.type === "sent" ? "success-green" : 
-                  msg.type === "error" ? "text-red-400" : 
-                  msg.type === "platform" ? (msg.success ? "success-green" : "text-red-400") :
-                  "warning-orange"
-                }>
-                  [{msg.type === "sent" ? "SENT" : 
-                    msg.type === "error" ? "ERROR" : 
-                    msg.type === "platform" ? msg.platform?.toUpperCase() || "PLATFORM" :
-                    "STATUS"}]
-                </span>{" "}
-                {msg.type === "sent" ? `Sent: "${msg.content}"` : msg.content}
-              </div>
-            ))}
-          </div>
+          <div className="text-secondary-ide">// Terminal connects to Email, SMS, WhatsApp & Slack</div>
           
           {/* Message Input */}
-          <div className="flex items-start gap-1 mt-2">
+          <div className="flex items-start gap-1 mt-4">
             <span className="success-green">{'>'}</span>
             <div className="flex-1">
               <Textarea
@@ -231,7 +202,7 @@ export function Terminal() {
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyDown={handleKeyDown}
                 className="w-full bg-transparent text-primary-ide border-none outline-none resize-none p-0 font-mono text-xs"
-                placeholder="Type message... (WhatsApp, SMS & Email)"
+                placeholder="Type message... (Email, SMS, WhatsApp & Slack)"
                 rows={1}
               />
               <div className="flex justify-between items-center mt-1">
@@ -246,6 +217,26 @@ export function Terminal() {
                 </Button>
               </div>
             </div>
+          </div>
+          
+          {/* Terminal Output */}
+          <div className="space-y-1 mt-4 min-h-32 overflow-y-auto">
+            {messages.map((msg, index) => (
+              <div key={index} className="text-secondary-ide text-xs py-1 px-2 rounded">
+                <span className={
+                  msg.type === "sent" ? "success-green" : 
+                  msg.type === "error" ? "text-red-400" : 
+                  msg.type === "platform" ? (msg.success ? "success-green" : "text-red-400") :
+                  "warning-orange"
+                }>
+                  [{msg.type === "sent" ? "SENT" : 
+                    msg.type === "error" ? "ERROR" : 
+                    msg.type === "platform" ? msg.platform?.toUpperCase() || "PLATFORM" :
+                    "STATUS"}]
+                </span>{" "}
+                {msg.type === "sent" ? `Sent: "${msg.content}"` : msg.content}
+              </div>
+            ))}
           </div>
         </div>
       </div>
