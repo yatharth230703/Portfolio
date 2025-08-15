@@ -3,58 +3,53 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertMessageSchema, insertChatMessageSchema } from "@shared/schema";
 import { z } from "zod";
+import { Groq } from 'groq-sdk';
+import path from 'path';
 
-// Mock resume/LinkedIn context for chatbot
-const resumeContext = {
-  name: "John Developer",
-  title: "Full Stack Developer",
-  experience: [
-    {
-      company: "TechCorp Solutions",
-      role: "Senior Frontend Developer",
-      duration: "Jan 2022 - Present",
-      description: "Led frontend development team, implemented modern React architecture"
-    },
-    {
-      company: "StartupXYZ",
-      role: "Full Stack Developer", 
-      duration: "Jun 2020 - Dec 2021",
-      description: "Developed end-to-end web applications, worked with product team"
-    }
-  ],
-  skills: ["React", "TypeScript", "Node.js", "Python", "AWS", "MongoDB", "PostgreSQL"],
-  education: "Computer Science Degree",
-  projects: ["TaskFlow Dashboard", "ShopSmart App", "AI Content Generator"]
-};
-
-function generateChatResponse(userMessage: string): string {
-  const message = userMessage.toLowerCase();
-  
-  if (message.includes("skill") || message.includes("technology") || message.includes("tech")) {
-    return `Based on John's profile, he specializes in ${resumeContext.skills.slice(0, 5).join(", ")}. He has extensive experience with modern web development frameworks and has led several successful projects!`;
+// Function to get Groq client (will be called after dotenv loads)
+function getGroqClient() {
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) {
+    throw new Error('GROQ_API_KEY environment variable is not set');
   }
   
-  if (message.includes("experience") || message.includes("work") || message.includes("job")) {
-    return `John has ${resumeContext.experience.length} years of professional experience. Currently he's a ${resumeContext.experience[0].role} at ${resumeContext.experience[0].company}, where he ${resumeContext.experience[0].description}.`;
-  }
-  
-  if (message.includes("project")) {
-    return `John has worked on several notable projects including ${resumeContext.projects.join(", ")}. Each project showcases his ability to deliver scalable solutions using modern technologies.`;
-  }
-  
-  if (message.includes("education") || message.includes("degree")) {
-    return `John holds a ${resumeContext.education} and has continuously updated his skills through practical experience and learning new technologies.`;
-  }
-  
-  if (message.includes("contact") || message.includes("hire") || message.includes("available")) {
-    return `John is always open to discussing new opportunities! You can reach out via the terminal below or schedule a meeting through the book_a_call.js tab.`;
-  }
-  
-  // Default response
-  return `That's a great question! John is a ${resumeContext.title} with expertise in ${resumeContext.skills.slice(0, 3).join(", ")}. Feel free to ask about his specific experience, projects, or skills!`;
+  console.log('Initializing Groq client with API key length:', apiKey.length);
+  console.log('API key starts with:', apiKey.substring(0, 10) + '...');
+  return new Groq({ apiKey });
 }
 
+// System prompt for the AI assistant
+const systemPrompt = `You are Yatharth Bisht's AI assistant. You have access to his professional background from LinkedIn and resume data.
+
+**Your personality:**
+- Act naturally and conversationally, like a helpful colleague
+- Keep responses crisp and precise - avoid long lists and unnecessary details
+- If a user's question is unclear or too broad, ask follow-up questions to understand what they really want to know
+- Be engaging and curious about their needs
+
+**Your knowledge:**
+- You know about Yatharth's skills, experience, projects, education, and achievements
+- Use this information naturally without mentioning "LinkedIn" or "Resume" sources
+- Focus on being helpful rather than explaining where information comes from
+
+**Response style:**
+- Keep it simple and direct
+- If someone asks about skills, give 3-4 key ones, not a long list
+- If they ask about projects, highlight 2-3 most relevant ones
+- Ask clarifying questions when needed: "What specific aspect are you interested in?" or "Are you looking for technical skills or project experience?"
+
+Current date: ${new Date().toISOString().split('T')[0]}`;
+
 export async function registerRoutes(app: Express): Promise<Server> {
+  
+  // Serve context files
+  app.get('/ai_context_linkedin.json', (req, res) => {
+    res.sendFile(path.resolve(import.meta.dirname, '..', 'client', 'public', 'ai_context_linkedin.json'));
+  });
+  
+  app.get('/ai_context_resume.json', (req, res) => {
+    res.sendFile(path.resolve(import.meta.dirname, '..', 'client', 'public', 'ai_context_resume.json'));
+  });
   
   // Send message via terminal (Resend + Twilio integration)
   app.post("/api/messages", async (req, res) => {
@@ -92,26 +87,71 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Chatbot conversation
+  // AI Chat Assistant with Groq
   app.post("/api/chat", async (req, res) => {
     try {
-      const { message } = req.body;
+      const { message, linkedinContext, resumeContext } = req.body;
+      
+      console.log('Chat request received:', { message, hasLinkedIn: !!linkedinContext, hasResume: !!resumeContext });
       
       if (!message || typeof message !== "string") {
         return res.status(400).json({ error: "Message is required" });
       }
+
+      if (!linkedinContext || !resumeContext) {
+        return res.status(400).json({ error: "Context data is required" });
+      }
       
-      const response = generateChatResponse(message);
+      // Set headers for streaming
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Connection', 'keep-alive');
       
-      const chatMessage = await storage.createChatMessage({
-        message,
-        response
-      });
-      
-      res.json({ 
-        response,
-        id: chatMessage.id 
-      });
+      try {
+        console.log('Calling Groq API...');
+        const groq = getGroqClient();
+        const chatCompletion = await groq.chat.completions.create({
+          messages: [
+            {
+              role: 'system',
+              content: systemPrompt
+            },
+            {
+              role: 'user',
+              content: `Here's the LinkedIn context: ${JSON.stringify(linkedinContext)}\n\nHere's the Resume context: ${JSON.stringify(resumeContext)}\n\nUser question: ${message}`
+            }
+          ],
+          model: 'gemma2-9b-it',
+          temperature: 1,
+          max_tokens: 1024,
+          top_p: 1,
+          stream: true
+        });
+
+        console.log('Groq API response received, streaming...');
+        // Stream the response with 30% slower speed
+        for await (const chunk of chatCompletion) {
+          const content = chunk.choices[0]?.delta?.content || '';
+          if (content) {
+            console.log('Streaming chunk:', content);
+            res.write(`data: ${JSON.stringify({ choices: [{ delta: { content } }] })}\n\n`);
+            
+            // Add delay to slow down streaming by 30%
+            await new Promise(resolve => setTimeout(resolve, 50)); // 50ms delay between chunks
+          }
+        }
+        
+        // Send completion signal
+        console.log('Streaming complete');
+        res.write('data: [DONE]\n\n');
+        res.end();
+        
+      } catch (groqError) {
+        console.error('Groq API error:', groqError);
+        res.write(`data: ${JSON.stringify({ choices: [{ delta: { content: "Sorry, I encountered an error. Please try again." } }] })}\n\n`);
+        res.write('data: [DONE]\n\n');
+        res.end();
+      }
       
     } catch (error) {
       console.error("Error in chat:", error);

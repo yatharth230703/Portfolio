@@ -1,3 +1,17 @@
+import dotenv from 'dotenv';
+import path from 'path';
+
+// Load environment variables FIRST, before any other imports
+const envPath = path.resolve(import.meta.dirname, '..', '.env');
+console.log('Loading .env from:', envPath);
+dotenv.config({ path: envPath });
+
+// Debug: Check if environment variables were loaded
+console.log('Environment check after dotenv:');
+console.log('- GROQ_API_KEY exists:', !!process.env.GROQ_API_KEY);
+console.log('- GROQ_API_KEY length:', process.env.GROQ_API_KEY ? process.env.GROQ_API_KEY.length : 'N/A');
+console.log('- All env vars with GROQ:', Object.keys(process.env).filter(key => key.includes('GROQ')));
+
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
