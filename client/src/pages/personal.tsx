@@ -1,7 +1,7 @@
 import { LineNumbers, CodeBlock, Comment, Keyword, Type } from "@/components/ui/monaco-editor";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, FileText, User } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, User, Brain, Code, Database, Globe, Calendar } from "lucide-react";
 
 export default function Personal() {
   return (
@@ -12,8 +12,8 @@ export default function Personal() {
         <CodeBlock>
           <Comment>
             <span>// Personal Information Module</span><br />
-            <span>// Author: John Developer</span><br />
-            <span>// Description: Developer Profile & Contact Information</span>
+            <span>// Author: Yatharth Bisht</span><br />
+            <span>// Description: AI Developer & Full-Stack Engineer Profile</span>
           </Comment>
           
           <div>
@@ -23,68 +23,64 @@ export default function Personal() {
           <div className="ml-4 space-y-3">
             {/* Profile Section */}
             <Card className="bg-sidebar border-ide p-3">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center">
-                  <User className="h-5 w-5 text-white" />
+              <div className="flex gap-4">
+                {/* Left Side - Profile Information */}
+                <div className="flex-1">
+                  <h2 className="text-lg font-semibold text-primary-ide">Yatharth Bisht</h2>
+                  <p className="text-secondary-ide text-sm">AI Developer & Full-Stack Engineer</p>
+                  <p className="text-secondary-ide text-xs">B.Tech Computer Engineering @ DTU</p>
                 </div>
-                <div>
-                  <h2 className="text-lg font-semibold text-primary-ide">John Developer</h2>
-                  <p className="text-secondary-ide text-sm">Full Stack Developer</p>
-                  <p className="text-secondary-ide text-xs">Building amazing web experiences</p>
+                
+                {/* Right Side - Contact Links */}
+                <div className="flex-1">
+                  <div className="space-y-1">
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
+                      <Linkedin className="h-3 w-3" />
+                      <span>linkedin.com/in/yatharth-bisht-8a559b241</span>
+                    </Button>
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
+                      <Github className="h-3 w-3" />
+                      <span>github.com/yatharth230703</span>
+                    </Button>
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
+                      <Mail className="h-3 w-3" />
+                      <span>vasub0723@gmail.com</span>
+                    </Button>
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
+                      <FileText className="h-3 w-3" />
+                      <span>Download Resume</span>
+                    </Button>
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
+                      <Calendar className="h-3 w-3" />
+                      <a href="https://calendar.app.google/7qwYwYBLy8DRy2Tv9" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        Book a Call
+                      </a>
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Contact Links */}
-              <div className="space-y-1">
-                <Button variant="ghost" className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                  <Linkedin className="h-3 w-3" />
-                  <span>linkedin.com/in/johndeveloper</span>
-                </Button>
-                <Button variant="ghost" className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                  <Github className="h-3 w-3" />
-                  <span>github.com/johndeveloper</span>
-                </Button>
-                <Button variant="ghost" className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                  <Mail className="h-3 w-3" />
-                  <span>john@developer.com</span>
-                </Button>
-                <Button variant="ghost" className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                  <FileText className="h-3 w-3" />
-                  <span>Download Resume</span>
-                </Button>
               </div>
             </Card>
             
             {/* About Me Section */}
             <Card className="bg-sidebar border-ide p-3">
-              <h3 className="text-sm font-semibold warning-orange mb-2">About Me</h3>
+              <h3 className="text-sm font-semibold text-red-400 mb-2">About Me</h3>
               <p className="text-primary-ide leading-relaxed text-xs">
-                Passionate full-stack developer with 3+ years of experience building scalable web applications. 
-                I love creating elegant solutions to complex problems and am always excited to learn new technologies. 
-                Currently focused on React, Node.js, and cloud architecture.
+                Pre-final year student at DTU passionate about AI and Generative AI. I believe in learning by building - 
+                from detection models to nano-GPT for Shakespearean verse generation. Currently building a startup in AI 
+                and have collaborated with Langchain's cofounder. Deeply passionate about GenAI, RAG systems, and 
+                intelligent AI agents.
               </p>
             </Card>
-            
-            {/* Skills Section */}
+
+            {/* Achievements */}
             <Card className="bg-sidebar border-ide p-3">
-              <h3 className="text-sm font-semibold warning-orange mb-2">Skills</h3>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <h4 className="accent-blue mb-1 text-xs">Frontend</h4>
-                  <div className="space-y-0.5 text-xs text-primary-ide">
-                    <div>React, TypeScript</div>
-                    <div>Next.js, Tailwind CSS</div>
-                    <div>Vue.js, Angular</div>
-                  </div>
-                </div>
-                <div>
-                  <h4 className="accent-blue mb-1 text-xs">Backend</h4>
-                  <div className="space-y-0.5 text-xs text-primary-ide">
-                    <div>Node.js, Python</div>
-                    <div>PostgreSQL, MongoDB</div>
-                    <div>AWS, Docker</div>
-                  </div>
-                </div>
+              <h3 className="text-sm font-semibold text-red-400 mb-2">Achievements</h3>
+              <div className="space-y-1 text-xs text-primary-ide">
+                <div>• Amazon ML Challenge: National Rank 135/700,000</div>
+                <div>• CodeChef Starters 159: Global Rank 4</div>
+                <div>• Kaggle Playground S4E6: Global Rank 198</div>
+                <div>• Selected for IITB-RISC Research Summit</div>
+                <div>• 700+ DSA problems solved on LeetCode</div>
               </div>
             </Card>
           </div>
