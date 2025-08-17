@@ -1,0 +1,69 @@
+{
+    "experience1": {
+      "title": "Founder Intern",
+      "company_name": "SCAILE Technologies",
+      "duration": "June 2024 – Present",
+      "description": {
+        "point1": "Troubleshooting tech-related problems, refactoring and optimizing code, deploying projects on modal cloud",
+        "point2": "Building Leadform, a fullstack based form-generation service for managing leads"
+      }
+    },
+    "experience2": {
+      "title": "AI Automation and Marketing Intern",
+      "company_name": "NewNative X LabLabAI",
+      "duration": "February 2025 - April 2025",
+      "description": {
+        "point1": "Automated marketing workflows using N8N, LlamaIndex, and AI agents",
+        "point2": "Reduced manual effort by 40% for a GenAI hackathon platform with 200,000+ members"
+      }
+    },
+    "experience3": {
+      "title": "Software Engineering Intern",
+      "company_name": "Cobalt",
+      "duration": "October 2024 – January 2025",
+      "description": {
+        "point1": "Engineered, built, and tested seamless app integrations",
+        "point2": "Implemented autonomous AI agents that dynamically generated integration methods"
+      }
+    },
+    "experience4": {
+      "title": "Research Intern",
+      "company_name": "IIT-Delhi",
+      "duration": "July 2024 - October 2024",
+      "description": {
+        "point1": "Constructed a deep learning-based computer vision model for waste classification",
+        "point2": "Improved sorting efficiency by 35%"
+      }
+    },
+    "experience5": {
+      "title": "Summer Intern",
+      "company_name": "SUNIC TECHNOLOGIES PRIVATE LIMITED",
+      "duration": "Jun 2024 - Jul 2024",
+      "description": {
+        "point1": "Worked with a team to bring AI solutions to large corporations.",
+        "point2": "Gained hands-on experience at an Inland Container Depot under a contract with CONCOR.",
+        "point3": "Applied skills in Deep Learning, Computer Vision, and Object Detection."
+      }
+    },
+    "experience6": {
+      "title": "Technical Writing Intern",
+      "company_name": "Earth5R",
+      "duration": "May 2024 - Jun 2024",
+      "description": {
+        "point1": "Created and maintained technical documentation for various projects.",
+        "point2": "Translated complex technical concepts into clear and concise content.",
+        "point3": ""
+      }
+    },
+    "experience7": {
+      "title": "Machine Learning Intern",
+      "company_name": "DraftAi",
+      "duration": "Feb 2024 - Apr 2024",
+      "description": {
+        "point1": "Performed data collection and preprocessing for finetuning Large Language Models.",
+        "point2": "Conducted model testing for specific use-cases and finetuned models like Mistral7B and Falcon7B.",
+        "point3": "Worked with API keys and HuggingFace Inference for model deployment and testing."
+      }
+    }
+  }
+  

@@ -58,6 +58,17 @@ export function FileExplorer({ files, onFileSelect, activeFile }: FileExplorerPr
         </div>
       </div>
       
+      {/* Profile Photo Section */}
+      <div className="p-2 border-t border-ide flex flex-col items-center">
+        <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-ide">
+          <img 
+            src="/profile_photo.webp" 
+            alt="Yatharth Bisht" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+      
       {/* Bottom Status */}
       <div className="p-2 border-t border-ide">
         <div className="flex items-center gap-1 text-xs text-secondary-ide">

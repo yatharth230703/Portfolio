@@ -30,6 +30,9 @@
   --accent-blue: hsl(207, 90%, 54%);
   --success-green: hsl(122, 39%, 49%);
   --warning-orange: hsl(39, 100%, 50%);
+  --accent-pink: hsl(330, 81%, 60%);
+  --accent-purple: hsl(270, 95%, 75%);
+  --accent-cyan: hsl(180, 100%, 50%);
   --text-primary: hsl(0, 0%, 87.8%);
   --text-secondary: hsl(0, 0%, 62.7%);
   --border-gray: hsl(0, 0%, 24.3%);
@@ -120,6 +123,18 @@
   
   .bg-warning-orange {
     background-color: var(--warning-orange);
+  }
+  
+  .bg-accent-pink {
+    background-color: var(--accent-pink);
+  }
+  
+  .bg-accent-purple {
+    background-color: var(--accent-purple);
+  }
+  
+  .bg-accent-cyan {
+    background-color: var(--accent-cyan);
   }
   
   .bg-editor {
