@@ -1,11 +1,12 @@
 {
     "experience1": {
-      "title": "Founder Intern",
+      "title": "Founding Engineer",
       "company_name": "SCAILE Technologies",
       "duration": "June 2024 – Present",
       "description": {
-        "point1": "Troubleshooting tech-related problems, refactoring and optimizing code, deploying projects on modal cloud",
-        "point2": "Building Leadform, a fullstack based form-generation service for managing leads"
+        "point1": "Troubleshooting tech-related problems, refactoring and optimizing code, deploying projects on modal cloud, AWS .",
+        "point2": "Building Leadform, a fullstack based form-generation service for managing leads",
+        "point3": "Started working as part-time contractor ,then intern and finally a Founding Engineer"
       }
     },
     "experience2": {

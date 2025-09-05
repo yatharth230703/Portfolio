@@ -1,0 +1,274 @@
+{
+    "project 1": {
+      "title": "Personal Portfolio Website (IDE Themed)",
+      "description": "A fullstack portfolio web app designed and built using React (TypeScript), Express, Vite, and Tailwind CSS. Features include an interactive file-explorer-like interface, tabbed views for personal details, projects, and experience, and integration with AI/automation content. Showcases frontend and backend integration, responsive design, and modular component-based architecture.",
+      "display_tech_stack": "React, TypeScript, Express, Vite, Tailwind CSS, ShadCN/UI, Radix UI, Node.js, Framer Motion, PostgreSQL (through Drizzle ORM), various automation/AI utilities",
+      "link": "https://github.com/yatharth230703/Portfolio",
+      "image": "/../images/Personal_Portfolio_Website_(IDE_Themed).png",
+      "category": "fullstack"
+    },
+    "project 2": {
+      "title": "Web Agent for Creating Backlinks",
+      "description": "An automated system leveraging AI agents and concurrent workers to streamline and scale the process of backlink creation. The project focuses on efficiently handling business data and profiles to generate backlinks with minimal manual intervention. Includes mechanisms for credential management, API key integration, and dynamic workflow configuration for marketing and SEO use-cases.",
+      "display_tech_stack": "Python, Playwright, Asyncio, OpenAI API, 2Captcha, HTML, CSS, JavaScript",
+      "link": "https://github.com/yatharth230703/Backlink_Final_concurrent_workers",
+      "image": "/../images/Web_Agent_for_Creating_Backlinks.png",
+      "category": "AI-Automation"
+    },
+    "project 3": {
+      "title": "FormBuilderV9: AI-Powered Form Engine",
+      "description": "FormBuilderV9 is a full-stack, AI-powered form engine that generates, renders, and manages dynamic multi-step forms from natural language prompts. It offers a rich component library, dynamic theming, embeddable and interactive forms, powerful conditional logic, and response management via a dashboard. Built with extensibility and flexibility for a seamless user experience, it leverages modern web technologies and AI for automatic form configuration.",
+      "display_tech_stack": "React, TypeScript, Vite, TailwindCSS, ShadCN UI, Node.js, Express, PostgreSQL, Supabase, Drizzle ORM, Supabase Auth, Google Gemini API",
+      "link": "https://github.com/yatharth230703/FormbuilderV9_final",
+      "image": "/../images/FormBuilderV9_AI-Powered_Form_Engine.png",
+      "category": "fullstack"
+    },
+    "project 4": {
+      "title": "Reddit Automation Toolkit",
+      "description": "Complete Reddit automation toolkit capable of creating Reddit accounts and solving invisible reCAPTCHAs using various browser automation frameworks. Includes robust API services, multi-framework support (Python/JavaScript), and detailed handling for Reddit's anti-bot measures. Features queue management, real-time status tracking, and best practices for scalable automation.",
+      "display_tech_stack": "Python, JavaScript, Flask, Playwright, Selenium, Puppeteer, 2captcha, HTML, CSS",
+      "link": "https://github.com/yatharth230703/Reddit_Automation",
+      "image": "/../images/Reddit_Automation_Toolkit.png",
+      "category": "AI-Automation"
+    },
+    "project 5": {
+      "title": "ImmoScout24 Scraping Challenge",
+      "description": "A robust scraping solution aimed at extracting property listings from ImmoScout24.de, tackling advanced bot detection and multiple protection layers. It includes features like rotating residential proxies, human-like browser automation (Selenium, Playwright, Undetected ChromeDriver), and automated captcha solving, with a focus on real estate data extraction in challenging, dynamic environments.",
+      "display_tech_stack": "Python, Playwright, Selenium, Undetected ChromeDriver, 2Captcha API, Residential Proxies, HTML, CSS, JavaScript",
+      "link": "https://github.com/yatharth230703/Immoscout_scrape",
+      "image": "/../images/ImmoScout24_Scraping_Challenge.png",
+      "category": "AI-Automation"
+    },
+    "project 6": {
+      "title": "SEO Checker",
+      "description": "A comprehensive SEO analysis tool that generates detailed PDF reports for websites. It provides technical SEO analysis, readability scoring, keyword analysis, mobile-friendliness check, image optimization analysis, link analysis, and AI-powered insights.",
+      "display_tech_stack": "Python, OpenAI API, Azure OpenAI, Automation, PDF Generation, SEO",
+      "link": "https://github.com/yatharth230703/seo_checker",
+      "image": "/../images/SEO_Checker.png",
+      "category": "AI-Automation"
+    },
+    "project 7": {
+      "title": "Google Maps Crawler",
+      "description": "A Python-based Google Maps crawler that automates the scraping of business and place data from Google Maps. It features concurrent scraping, robust data extraction, and cleaning functionalities, all deployed securely via Modal with FastAPI, containerization, and Supabase for environment management. The project exemplifies secure credential handling with .env setup, modular cloud deployment, and concurrent processing for scalability.",
+      "display_tech_stack": "Python, FastAPI, Modal, Supabase, Docker, Pandas, BeautifulSoup, Requests, Multithreading",
+      "link": "https://github.com/yatharth230703/gmaps_crawler",
+      "image": "/../images/Google_Maps_Crawler.png",
+      "category": "AI-Automation"
+    },
+    "project 8": {
+      "title": "Web Voyager Agent - Custom Web Navigation Automation",
+      "description": "A Python-based intelligent web automation agent that utilizes Playwright, LangChain, and OpenAI's GPT-4o-mini to perform automated, LLM-driven web navigation, visual UI annotation, and interactive decision-making for complex browser tasks. The project includes a browser-automation engine (web_voyager_agent.py) and a JavaScript tool for visually labeling interactive page areas (mark_page.js), supporting advanced scenario handling for B2B and SME applications.",
+      "display_tech_stack": "Python, JavaScript, Playwright, LangChain, OpenAI GPT-4o-mini, AsyncIO, Web Automation",
+      "link": "https://github.com/yatharth230703/webnav_custom",
+      "image": "/../images/Web_Voyager_Agent_-_Custom_Web_Navigation_Automation.png",
+      "category": "AI-Automation"
+    },
+    "project 9": {
+      "title": "Agent_Builder",
+      "description": "Agent_Builder is a full-stack AI automation framework that enables users to create, configure, and deploy customizable AI agents for automation workflows. The project includes a React frontend, an Express.js backend, and a Python-based Flask AI orchestration server. Modular agent design supports chatbots, recommendation engines, tech/code review, and cost analysis, with end-to-end integration for databases and scalable deployment.",
+      "display_tech_stack": "TypeScript, React, Express.js, Node.js, Flask, Python, AI-Orchestration, Supabase, Tailwind CSS, Drizzle ORM, REST, JWT, Postgres, Shadcn/UI",
+      "link": "https://github.com/yatharth230703/Agent_Builder",
+      "image": "/../images/Agent_Builder.png",
+      "category": "fullstack"
+    },
+    "project 10": {
+      "title": "BSE-TRACKER",
+      "description": "A software tool intended to track and interact with data from the Bombay Stock Exchange (BSE). Developed in Python, the project consists of multiple scripts designed for extracting, storing, and automating actions related to stock data. It likely utilizes web scraping and automation to help users monitor and analyze stock market activity and organize the acquired data for personal use.",
+      "display_tech_stack": "Python, Automation, Web Scraping, CSV",
+      "link": "https://github.com/yatharth230703/BSE-TRACKER",
+      "image": "/../images/BSE-TRACKER.png",
+      "category": "AI-Automation"
+    },
+    "project 11": {
+      "title": "Open PDF2Brainrot",
+      "description": "A Django-powered web app that lets you upload a PDF and automatically turns each page into an interactive flashcard (JSON) plus a short 'Brainrot' video. The platform provides a smooth UI to browse flashcards side-by-side with their generated videos, making study and content review highly interactive.",
+      "display_tech_stack": "Python, Django, MoviePy, FFmpeg, HTML, JSON, Gemini API",
+      "link": "https://github.com/yatharth230703/Open_PDF2Brainrot",
+      "image": "/../images/Open_PDF2Brainrot.png",
+      "category": "AI-Automation"
+    },
+    "project 12": {
+      "title": "Supabase Mini Project - Smoothie Recipe Manager",
+      "description": "A starter React project that demonstrates CRUD operations for smoothie recipes using Supabase as the backend. Users can create, view, and delete smoothie recipes, with real-time updates from the database. The project showcases React fundamentals alongside integration with Supabase authentication and database services.",
+      "display_tech_stack": "React, JavaScript, Supabase, HTML, CSS, React Router",
+      "link": "https://github.com/yatharth230703/Supabase_mini_proj",
+      "image": "/../images/Supabase_Mini_Project_-_Smoothie_Recipe_Manager.png",
+      "category": "fullstack"
+    },
+    "project 13": {
+      "title": "AI Project CWS",
+      "description": "A computer vision project utilizing YOLO (You Only Look Once) v8 for face detection combined with Deep SORT for advanced object tracking in video streams. Implements movement plotting and can process high-speed video for robust object detection and tracking. Includes large-scale resources for deep learning models and test video files.",
+      "display_tech_stack": "Python, OpenCV, YOLOv8, Deep SORT, ResNet50, Computer Vision, Machine Learning, Object Detection, Tracking",
+      "link": "https://github.com/yatharth230703/AI-PROJECT",
+      "image": "/../images/AI_Project_CWS.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 14": {
+      "title": "Agent Marketplace: AI & Automation Toolkit",
+      "description": "A multi-agent AI toolkit featuring crew-based forest fire management, NLP-powered geospatial text analytics, vector-based AQI image forecasting, deep learning text embeddings, automatic voice-to-text conversion, and rich interactive mapping components. Core modules leverage Python, spaCy, CrewAI, Gemini (Google), and ChromaDB for advanced document, audio, and image processing. Designed for end-to-end automation, ML research, and real-world geospatial & environmental intelligence.",
+      "display_tech_stack": "Python, Jupyter Notebook, spaCy, ChromaDB, CrewAI, Gemini, PyAudio, React Leaflet, HTML, Machine Learning, NLP, Multimodal AI, Speech Recognition",
+      "link": "https://github.com/yatharth230703/agent-marketplace",
+      "image": "/../images/Agent_Marketplace_AI_&_Automation_Toolkit.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 15": {
+      "title": "LlamaIndex Chatbot",
+      "description": "A simple chatbot application built using LlamaIndex and Streamlit. It utilizes the OpenAI GPT model for natural language responses and features a web-based interface for user interaction.",
+      "display_tech_stack": "Python, Streamlit, LlamaIndex, OpenAI GPT",
+      "link": "https://github.com/yatharth230703/llamaindex-chatbot",
+      "image": "/../images/LlamaIndex_Chatbot.png",
+      "category": "AI-Automation"
+    },
+    "project 16": {
+      "title": "Finetuning DistilledGPT on Synthetic Sales Data",
+      "description": "A personal practice project that involves finetuning the lightweight DistilGPT2 language model (a distilled, faster, and smaller version of GPT-2) on a custom synthetic dataset of sales and customer service conversations. This work covers the full implementation pipeline in Jupyter Notebook, including dataset extraction from HuggingFace, preprocessing, TensorFlow/Keras model setup, epoch-based training, and validation. The project demonstrates AI-powered natural language generation tailored to help automate responses and provide support in sales scenarios. The methodology, technical documentation, and evaluation of the finetuned model are also provided in detail.",
+      "display_tech_stack": "Python, Jupyter Notebook, TensorFlow, HuggingFace Transformers, GPT-2, DistilGPT2, Data Processing, AI/NLP, Machine Learning",
+      "link": "https://github.com/yatharth230703/finetuning_distillGPT",
+      "image": "/../images/Finetuning_DistilledGPT_on_Synthetic_Sales_Data.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 17": {
+      "title": "Combined Virtual Nursing Assistant Crew",
+      "description": "A multi-modal AI system that merges two Virtual Nursing Assistant crews into a single platform. It provides medical insights, suggests medication usage and dosages, detects eye diseases using image analysis, and determines when to seek professional medical help. Built on the CrewAI framework, it defines specialized agents for each task, making healthcare advice and disease detection more accessible and intelligent.",
+      "display_tech_stack": "Python, CrewAI, FastAI, OpenAI API, Medical NLP, Computer Vision, Healthcare AI",
+      "link": "https://github.com/yatharth230703/multi-modal-agent",
+      "image": "/../images/Combined_Virtual_Nursing_Assistant_Crew.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 18": {
+      "title": "Audio Embedding System for Music Similarity and Analysis",
+      "description": "A machine learning-based application that analyzes music tracks by extracting audio features and embeddings, leveraging both Spotify API metadata and YouTube audio content. The system can download Spotify playlists, process and convert them to MP3s, extract lyrics using APIs and web scraping, and use deep learning (TensorFlow autoencoder) for song similarity detection and genre classification. Advanced audio feature extraction is powered by librosa and integrated ML pipelines.",
+      "display_tech_stack": "Python, TensorFlow, Jupyter Notebook, librosa, spotipy, scikit-learn, matplotlib, YouTube_dl/yt_dlp, requests, ffmpeg, bs4, pandas, numpy",
+      "link": "https://github.com/yatharth230703/Aims_task3_r1_finalsub",
+      "image": "/../images/Audio_Embedding_System_for_Music_Similarity_and_Analysis.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 19": {
+      "title": "CCD Automation: Recurrent Neural Networks and Variants",
+      "description": "This repository contains the final submissions for the AIMS CCD project, including different neural approaches using RNN, LSTM, and attention-based models. The focus is on intelligent classification, prediction, and anomaly detection using advanced deep learning techniques. Failed or exploratory attempts (like Isolation Forest) are also present, evidencing a robust experimentation process.",
+      "display_tech_stack": "Python, Jupyter Notebook, Deep Learning, RNN, LSTM, Attention Mechanism, Time Series Forecasting, Anomaly Detection",
+      "link": "https://github.com/yatharth230703/AIMS_CCD_FINAL_SUBMISSIOn",
+      "image": "/../images/CCD_Automation_Recurrent_Neural_Networks_and_Variants.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 20": {
+      "title": "Trailer Loading Demo",
+      "description": "A computer vision-based demo developed as an internship assignment to automate counting containers loaded onto trailers. For practical and experimental purposes, the system utilizes a chair as a surrogate for a trailer, identifying and counting objects placed on it in real-time using object detection models. The solution employs YOLOv8 and Faster R-CNN (TensorFlow), leveraging live webcam feeds and custom dataset labeling routines.",
+      "display_tech_stack": "Python, YOLOv8, TensorFlow, OpenCV, Computer Vision, Deep Learning, Object Detection",
+      "link": "https://github.com/yatharth230703/trailer_loading_demo",
+      "image": "/../images/Trailer_Loading_Demo.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 21": {
+      "title": "Fraudulent Transaction Prediction",
+      "description": "A machine learning project designed to detect fraudulent transactions in financial datasets using the Isolation Forest algorithm. The project encompasses a full workflow: comprehensive data cleaning (addressing missing values, outliers, and multi-collinearity), variable selection focused on key financial features, and deploying an anomaly detection model for fraud identification. The model demonstrates strong performance metrics, including ~99.3% accuracy, and provides detailed precision, recall, and F1-score evaluations. The solution also integrates a Gradio web app interface for end-user predictions.",
+      "display_tech_stack": "Python, scikit-learn, Pandas, Jupyter Notebook, Gradio, Matplotlib, Seaborn, Plotly",
+      "link": "https://github.com/yatharth230703/Fraudulent_Transaction_Prediction",
+      "image": "/../images/Fraudulent_Transaction_Prediction.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 22": {
+      "title": "Custom Image Segmentation Neural Network",
+      "description": "A project featuring custom neural network architectures, including MultiResUNet and PSPNet, designed to generate segmentation maps for a given set of images. These models leverage advanced deep learning techniques like encoder-decoder structures, multi-resolution blocks, residual paths, and pyramid pooling for semantic segmentation tasks.",
+      "display_tech_stack": "TensorFlow, Keras, Deep Learning, Neural Networks, Computer Vision, Jupyter Notebook, MultiResUNet, PSPNet, Python",
+      "link": "https://github.com/yatharth230703/image-segmentation-aims-team",
+      "image": "/../images/Custom_Image_Segmentation_Neural_Network.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 23": {
+      "title": "Insta-YT Content Creator Scraper",
+      "description": "AI-powered content scraping tool for digital marketing research that extracts data from Instagram Reels and YouTube videos using automation and machine learning. Includes modules for automatic speech recognition (OpenAI Whisper) and AI content analysis (Google Gemini) to analyze and categorize video data and hooks.",
+      "display_tech_stack": "Python, Jupyter Notebook, OpenAI Whisper, Google Gemini, Apify, Machine Learning, AI Automation",
+      "link": "https://github.com/yatharth230703/insta-yt-content-creator-scraper",
+      "image": "/../images/Insta-YT_Content_Creator_Scraper.png",
+      "category": "AI-Automation"
+    },
+    "project 24": {
+      "title": "CREWAI-powered Blood Report Analysis",
+      "description": "This project leverages the crew.ai framework to automate blood report analysis and generate health recommendations. It utilizes agents to read, extract, and interpret data from blood report PDFs, and supplements findings by referencing relevant health articles from the internet. The workflow is modular, involving tasks like PDF-to-text conversion, key health indicator extraction, and actionable health advice generation.",
+      "display_tech_stack": "Python, crewai, crewai_tools, PyMuPDF (fitz), OpenAI API, Serper API",
+      "link": "https://github.com/yatharth230703/CREWAI-powered-Blood-Report-Analysis",
+      "image": "/../images/CREWAI-powered_Blood_Report_Analysis.png",
+      "category": "AI-Automation"
+    },
+    "project 25": {
+      "title": "Lane Line Detection & Polynomial Equation Generation",
+      "description": "A machine learning-based lane line detection system tailored for electric vehicles. This project uses computer vision techniques to identify lane lines on the road and fits polynomial equations to the detected lane markings, enabling accurate curve tracking and advanced driver assistance. The implementation features edge detection, region masking, Hough transform for line detection, and polynomial curve fitting, all demonstrated through Jupyter notebooks and video outputs.",
+      "display_tech_stack": "Python, OpenCV, NumPy, SciPy, Jupyter Notebook, Matplotlib, MoviePy",
+      "link": "https://github.com/yatharth230703/Lane-Line-Polynomial-equation",
+      "image": "/../images/Lane_Line_Detection_&_Polynomial_Equation_Generation.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 26": {
+      "title": "LegalEase",
+      "description": "A chatbot app that generates legal templates according to user requests, using advanced Retrieval-Augmented Generation (RAG) technology for high accuracy and minimal errors. It revolutionizes legal document creation and clarification with AI, serving users' needs in the legal domain with speed and reliability.",
+      "display_tech_stack": "Next.js, Flutter, Python, FastAPI, Uvicorn, Pydantic, Azure, AWS, llama-index, HuggingFace, Pytorch, ChromaDB",
+      "link": "https://github.com/yatharth230703/legaleaseapp-Hackathon",
+      "image": "/../images/LegalEase.png",
+      "category": "AI-Automation"
+    },
+    "project 27": {
+      "title": "Infinite Poetry (nano_gpt_try_run)",
+      "description": "This project was created to better understand the concepts of self-attention, multi-head attention, and the overall workings of transformers. Inspired by the nanoGPT project, it involves experimenting with transformer-based architectures—primarily for generating poetry. The repository contains code and notebooks for data collection, training, and process documentation.",
+      "display_tech_stack": "Python, Jupyter Notebook, Transformers, Deep Learning, NLP",
+      "link": "https://github.com/yatharth230703/infinite_poetry",
+      "image": "/../images/Infinite_Poetry_(nano_gpt_try_run).png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 28": {
+      "title": "Audio Sentiment Analysis - Code Crunch Hackathon",
+      "description": "This project implements audio sentiment analysis by processing audio emotions extracted from various datasets. It extracts Mel-spectrogram features from audio files and uses convolutional neural networks (CNNs) to classify emotions. Trained models classify audio into emotions such as Angry, Happy, Disgusted, Fearful, Neutral, and Sad. The system combines predictions from multiple models for improved accuracy, achieving up to 99.5% accuracy on individual classes.",
+      "display_tech_stack": "Python, Jupyter Notebook, TensorFlow, Keras, Librosa, scikit-learn, numpy, pandas, seaborn, matplotlib, joblib",
+      "link": "https://github.com/yatharth230703/CODE_CRUNCH_HACKATHON-Audio_Sentiment_Analysis-",
+      "image": "/../images/Audio_Sentiment_Analysis_-_Code_Crunch_Hackathon.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 29": {
+      "title": "PDF Structural Extraction – Adobe Hackathon Submission",
+      "description": "A robust pipeline to convert complex, visually-rich PDFs into clean, semantically structured JSON schemas. The approach intelligently parses PDF content using PyMuPDF, combines multiple semantic and geometric signals (not just font-size) to accurately detect headings, removes repetitive noise (headers, footers, tables) and supports batch processing. Designed to handle multi-column layouts, scanned documents, and design-heavy files, it produces high-quality output using logical chunking, heading re-mapping, and custom translation layers.",
+      "display_tech_stack": "Python, PyMuPDF, Docker, CLI, PDF Parsing, Data Extraction, JSON, Automation",
+      "link": "https://github.com/yashjain2610/bitShifters_1a",
+      "image": "/../images/PDF_Structural_Extraction_–_Adobe_Hackathon_Submission.png",
+      "category": "AI-Automation"
+    },
+    "project 30": {
+      "title": "PDF Content Analysis and Ranking System",
+      "description": "A multi-stage AI-powered system designed to process PDF documents for targeted content extraction, ranking, and summarization. It leverages document structure analysis, context-aware section ranking using advanced language models, and intelligent content summarization for use cases such as personalized search, academic review, and job task matching. The pipeline features robust error handling, parallel processing for scalability, and outputs structured metadata and context-enriched summaries.",
+      "display_tech_stack": "Python, PyMuPDF, T5-small, Ollama API, Qwen3:0.6b, ProcessPoolExecutor, Docker",
+      "link": "https://github.com/yashjain2610/bitShifters_1b",
+      "image": "/../images/PDF_Content_Analysis_and_Ranking_System.png",
+      "category": "AI-Automation"
+    },
+    "project 31": {
+      "title": "Pose Estimation using MediaPipe",
+      "description": "A minimal implementation of real-time human pose estimation using MediaPipe and OpenCV. The script captures video input (deadlift form), detects human pose landmarks, draws them, and visualizes the detected joints on each frame, useful for form assessment and computer vision applications.",
+      "display_tech_stack": "Python, OpenCV, MediaPipe, Computer Vision, Real-Time Processing",
+      "link": "https://github.com/yatharth230703/projects_yatharth/blob/main/pose_estimation_min.py",
+      "image": "/../images/Pose_Estimation_using_MediaPipe.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 32": {
+      "title": "Titanic Survival Prediction using Machine Learning",
+      "description": "This project explores and predicts the survival of passengers aboard the Titanic using the Kaggle Titanic dataset. It covers thorough exploratory data analysis, data preprocessing (such as handling missing values, feature normalization, and one-hot encoding), and applies various machine learning algorithms (mainly Random Forest Classifier). The notebook showcases step-by-step analysis, model tuning, and evaluation, with relevant data visualizations and insights into feature importance in survival prediction.",
+      "display_tech_stack": "Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Jupyter Notebook",
+      "link": "https://github.com/yatharth230703/projects_yatharth/blob/main/titanic-yatharth.ipynb",
+      "image": "/../images/Titanic_Survival_Prediction_using_Machine_Learning.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 33": {
+      "title": "Virtual Painter",
+      "description": "A real-time computer vision application that enables users to draw on their webcam feed using hand gestures. By leveraging Mediapipe for hand detection and OpenCV for drawing, users can select colors and draw or erase directly in the air without any physical tools. This project demonstrates human-computer interaction using AI-powered hand tracking.",
+      "display_tech_stack": "Python, OpenCV, Mediapipe, Numpy, Computer Vision",
+      "link": "https://github.com/yatharth230703/projects_yatharth/blob/main/virtual_painter.py",
+      "image": "/../images/Virtual_Painter.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    },
+    "project 34": {
+      "title": "Toxicity Classification",
+      "description": "A deep learning project that builds an LSTM-based text classification model to identify various forms of toxic comments, including toxic, severe toxic, obscene, threat, insult, and identity hate. The project utilizes TensorFlow and Keras with custom text vectorization, data preprocessing, and model evaluation logic. The dataset is split into training, validation, and test sets, and the model employs advanced features like bidirectional LSTMs to enhance NLP performance. Evaluation includes precision, recall, and accuracy metrics for robust performance analysis.",
+      "display_tech_stack": "Python, TensorFlow, Keras, LSTM, Jupyter Notebook, Pandas, NumPy, Machine Learning, NLP",
+      "link": "https://github.com/yatharth230703/projects_yatharth/blob/main/TOXICITY_CLASSIFICATION.ipynb",
+      "image": "/../images/Toxicity_Classification.png",
+      "category": "Machine Learning ( ML/DL/CV/GenAI)"
+    }
+  }
