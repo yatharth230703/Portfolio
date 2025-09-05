@@ -81,7 +81,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-x-hidden">
       {/* Mobile: Hidden sidebar, Desktop: Visible */}
       <div className="hidden lg:block">
         <FileExplorer 
@@ -91,7 +91,9 @@ export default function Portfolio() {
         />
       </div>
       
-      <div className="flex-1 flex flex-col min-w-0 h-screen">
+      <div className={`flex-1 flex flex-col min-w-0 h-screen ${
+        isMobile && !isChatOpen ? 'w-full' : ''
+      }`}>
         {/* Mobile: Show file explorer as horizontal tabs */}
         <div className={`lg:hidden bg-sidebar border-b border-ide p-2 transition-all duration-300 ${
           isChatOpen ? 'opacity-0 h-0 p-0 overflow-hidden' : 'opacity-100'
@@ -151,7 +153,7 @@ export default function Portfolio() {
         isMobile 
           ? (isChatOpen 
               ? 'w-40 sm:w-48 opacity-100 translate-x-0 chat-slide-in' 
-              : 'w-0 opacity-0 -translate-x-full chat-slide-out')
+              : 'hidden')
           : 'w-64 xl:w-72 opacity-100'
       }`}>
         <div className={`h-full transition-all duration-500 ease-in-out ${

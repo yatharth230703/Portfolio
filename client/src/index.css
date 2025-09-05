@@ -179,6 +179,17 @@
     .mobile-container {
       overflow-x: hidden;
     }
+    
+    /* Tech stack badges responsive sizing */
+    .tech-badge {
+      font-size: 0.6rem !important;
+      padding: 0.125rem 0.25rem !important;
+      line-height: 1 !important;
+      max-width: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
   
   /* Chat animation keyframes */

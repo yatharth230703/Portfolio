@@ -298,7 +298,7 @@ export default function Projects() {
                             : 'opacity-70 hover:opacity-90'
                         }`}
                       >
-                        <Card className={`bg-sidebar border-ide p-2 sm:p-3 h-full mx-1 transition-all duration-300 ${
+                        <Card className={`bg-sidebar border-ide p-2 sm:p-3 h-full mx-1 transition-all duration-300 min-h-[120px] sm:min-h-[140px] ${
                           selectedProject?.title === project.title 
                             ? 'border-accent-blue shadow-lg ring-2 ring-accent-blue/20' 
                             : 'hover:border-warning-orange hover:shadow-md'
@@ -309,13 +309,13 @@ export default function Projects() {
                             className="rounded-lg w-full h-20 sm:h-24 object-cover border border-ide mb-2 sm:mb-3"
                           />
                           <h3 className="text-xs sm:text-sm warning-orange mb-2 line-clamp-2 h-6 sm:h-8">{project.title}</h3>
-                          <div className="flex gap-1 flex-wrap">
+                          <div className="flex gap-1 flex-wrap min-h-0">
                             {getTechStack(project.display_tech_stack).map((tech) => (
                               <Badge 
                                 key={tech}
-                                className={`${getTechColor(tech)} text-white text-xs`}
+                                className={`${getTechColor(tech)} text-white text-xs px-1 py-0.5 flex-shrink-0 max-w-full truncate tech-badge`}
                               >
-                                {tech}
+                                <span className="truncate">{tech}</span>
                               </Badge>
                             ))}
                           </div>
@@ -349,13 +349,13 @@ export default function Projects() {
                       <p className="text-primary-ide mb-4 leading-relaxed text-xs sm:text-sm">
                         {selectedProject.description}
                       </p>
-                      <div className="flex gap-1 mb-4 flex-wrap">
+                      <div className="flex gap-1 mb-4 flex-wrap min-h-0">
                         {getTechStack(selectedProject.display_tech_stack).map((tech) => (
                           <Badge 
                             key={tech}
-                            className={`${getTechColor(tech)} text-white text-xs`}
+                            className={`${getTechColor(tech)} text-white text-xs px-1 py-0.5 flex-shrink-0 max-w-full truncate tech-badge`}
                           >
-                            {tech}
+                            <span className="truncate">{tech}</span>
                           </Badge>
                         ))}
                       </div>
