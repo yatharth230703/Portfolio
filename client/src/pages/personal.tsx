@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, FileText, User, Brain, Code, Database, Globe, Calendar } from "lucide-react";
 
 export default function Personal() {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/YATHARTH BISHT DTU RESUME.pdf';
+    link.download = 'YATHARTH BISHT DTU RESUME.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="flex-1 flex h-full">
       <LineNumbers count={30} />
@@ -46,7 +55,11 @@ export default function Personal() {
                       <Mail className="h-3 w-3" />
                       <span>vasub0723@gmail.com</span>
                     </Button>
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
+                    <Button 
+                      variant="ghost" 
+                      className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs"
+                      onClick={handleDownloadResume}
+                    >
                       <FileText className="h-3 w-3" />
                       <span>Download Resume</span>
                     </Button>
