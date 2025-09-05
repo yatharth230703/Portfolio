@@ -45,11 +45,15 @@ export default function Personal() {
                   <div className="space-y-1">
                     <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
                       <Linkedin className="h-3 w-3 flex-shrink-0" />
-                      <span className="truncate">linkedin.com/in/yatharth-bisht-8a559b241</span>
+                      <a href="https://linkedin.com/in/yatharth-bisht-8a559b241" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        LinkedIn
+                      </a>
                     </Button>
                     <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
                       <Github className="h-3 w-3 flex-shrink-0" />
-                      <span className="truncate">github.com/yatharth230703</span>
+                      <a href="https://github.com/yatharth230703" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        Github
+                      </a>
                     </Button>
                     <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
                       <Mail className="h-3 w-3 flex-shrink-0" />
