@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { Terminal as TerminalIcon, Plus, X, GripVertical } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import { Terminal as TerminalIcon, ArrowUpDown } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 
@@ -25,6 +23,24 @@ export function Terminal() {
   // Height constraints
   const MIN_HEIGHT = 40; // Just enough for the header bar
   const MAX_HEIGHT = window.innerHeight * 0.5; // Half of the viewport height
+  
+  // Calculate optimal height based on messages
+  const calculateOptimalHeight = (messageCount: number) => {
+    const baseHeight = 128; // Default height
+    const messageHeight = 24; // Approximate height per message
+    const padding = 32; // Extra padding for input and spacing
+    
+    const calculatedHeight = baseHeight + (messageCount * messageHeight) + padding;
+    return Math.min(calculatedHeight, MAX_HEIGHT);
+  };
+  
+  // Auto-expand terminal when messages are added
+  const expandTerminalForMessages = (messageCount: number) => {
+    const optimalHeight = calculateOptimalHeight(messageCount);
+    if (optimalHeight > terminalHeight) {
+      setTerminalHeight(optimalHeight);
+    }
+  };
 
   const sendMessageMutation = useMutation({
     mutationFn: async (data: { content: string }) => {
@@ -44,6 +60,9 @@ export function Terminal() {
       // Clear previous messages and show only sent message
       setMessages([sentMessage]);
       setMessage("");
+      
+      // Auto-expand terminal to show the sent message
+      expandTerminalForMessages(1);
       
       // Wait a moment before starting confirmations
       await new Promise(resolve => setTimeout(resolve, 800));
@@ -66,6 +85,9 @@ export function Terminal() {
           updatedMessages.push(platformMessage);
           setMessages([...updatedMessages]);
           
+          // Auto-expand terminal to show new platform message
+          expandTerminalForMessages(updatedMessages.length);
+          
           // Wait before next platform (0.6-1.2 seconds)
           await new Promise(resolve => setTimeout(resolve, 600 + Math.random() * 600));
         }
@@ -84,6 +106,9 @@ export function Terminal() {
           
           updatedMessages.push(summaryMessage);
           setMessages([...updatedMessages]);
+          
+          // Auto-expand terminal to show summary message
+          expandTerminalForMessages(updatedMessages.length);
         }
       } else {
         // Fallback for backward compatibility
@@ -96,6 +121,9 @@ export function Terminal() {
             type: "status"
           } as TerminalMessage
         ]);
+        
+        // Auto-expand terminal to show fallback message
+        expandTerminalForMessages(2);
       }
     },
     onError: (error) => {
@@ -108,6 +136,9 @@ export function Terminal() {
           type: "error"
         }
       ]);
+      
+      // Auto-expand terminal to show error message
+      expandTerminalForMessages(1);
     }
   });
 
@@ -118,7 +149,7 @@ export function Terminal() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.ctrlKey && e.key === "Enter") {
+    if (e.key === "Enter") {
       handleSend();
     }
   };
@@ -177,33 +208,19 @@ export function Terminal() {
       className="bg-editor border-t border-ide flex-shrink-0 relative"
       style={{ height: `${terminalHeight}px` }}
     >
-      {/* Resize handle */}
       <div 
-        className={`absolute -top-1 left-0 right-0 h-1 cursor-ns-resize transition-colors ${
-          isResizing ? 'bg-accent-blue/40' : 'bg-transparent hover:bg-accent-blue/20'
+        className={`flex items-center gap-1 px-2 py-1 bg-sidebar border-b border-ide text-xs cursor-ns-resize ${
+          terminalHeight <= MIN_HEIGHT ? 'bg-sidebar/80' : ''
         }`}
         onMouseDown={handleMouseDown}
       >
-        <div className="flex justify-center">
-          <GripVertical className={`h-1 w-4 ${isResizing ? 'text-accent-blue' : 'text-accent-blue/40'}`} />
-        </div>
-      </div>
-      
-      <div className={`flex items-center gap-1 px-2 py-1 bg-sidebar border-b border-ide text-xs ${
-        terminalHeight <= MIN_HEIGHT ? 'bg-sidebar/80' : ''
-      }`}>
         <TerminalIcon className="h-3 w-3 accent-blue" />
         <span className="text-secondary-ide">TERMINAL</span>
         {terminalHeight <= MIN_HEIGHT && (
           <span className="text-accent-blue/60 text-xs ml-2">(Drag to expand)</span>
         )}
-        <div className="flex ml-auto gap-1">
-          <Button variant="ghost" size="sm" className="text-secondary-ide hover:text-primary-ide h-5 w-5 p-0">
-            <Plus className="h-2.5 w-2.5" />
-          </Button>
-          <Button variant="ghost" size="sm" className="text-secondary-ide hover:text-primary-ide h-5 w-5 p-0">
-            <X className="h-2.5 w-2.5" />
-          </Button>
+        <div className="flex ml-auto">
+          <ArrowUpDown className="h-3 w-3 text-secondary-ide/60" />
         </div>
       </div>
       
@@ -214,31 +231,20 @@ export function Terminal() {
             <span className="text-primary-ide ml-1">Send me a message directly!</span>
           </div>
           <div className="text-secondary-ide">// Terminal connects to Email, SMS, WhatsApp & Slack</div>
+          <div className="text-secondary-ide">// Simply press Enter to send your message</div>
           
           {/* Message Input */}
-          <div className="flex items-start gap-1 mt-4">
+          <div className="flex items-center gap-1 mt-4">
             <span className="success-green">{'>'}</span>
-            <div className="flex-1">
-              <Textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                onKeyDown={handleKeyDown}
-                className="w-full bg-transparent text-primary-ide border-none outline-none resize-none p-0 font-mono text-xs"
-                placeholder="Type message... (Email, SMS, WhatsApp & Slack)"
-                rows={1}
-              />
-              <div className="flex justify-between items-center mt-1">
-                <div className="text-secondary-ide text-xs">Ctrl+Enter</div>
-                <Button
-                  onClick={handleSend}
-                  disabled={!message.trim() || sendMessageMutation.isPending}
-                  size="sm"
-                  className="bg-accent-blue hover:bg-blue-600 text-white h-5 px-2 text-xs"
-                >
-                  {sendMessageMutation.isPending ? "..." : "Send"}
-                </Button>
-              </div>
-            </div>
+            <input
+              type="text"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="flex-1 bg-transparent text-primary-ide border-none outline-none font-mono text-xs"
+              placeholder="Type message... (Email, SMS, WhatsApp & Slack)"
+              disabled={sendMessageMutation.isPending}
+            />
           </div>
           
           {/* Terminal Output */}
