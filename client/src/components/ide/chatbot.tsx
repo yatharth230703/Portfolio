@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { Bot, User, Send, Circle, Loader2 } from "lucide-react";
+import { Bot, User, Send, Circle, Loader2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -95,7 +95,11 @@ interface ResumeContext {
   certifications_achievements: string[];
 }
 
-export function ChatBot() {
+interface ChatBotProps {
+  onClose?: () => void;
+}
+
+export function ChatBot({ onClose }: ChatBotProps) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
@@ -256,19 +260,29 @@ export function ChatBot() {
   }, [messages]);
 
   return (
-    <div className="w-64 bg-sidebar border-l border-ide flex flex-col h-full">
+    <div className="w-full bg-sidebar border-l border-ide flex flex-col h-full">
       {/* Chat Header */}
       <div className="p-2 border-b border-ide flex-shrink-0">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 bg-accent-blue rounded-full flex items-center justify-center">
             <Bot className="h-3 w-3 text-white" />
           </div>
-          <div>
-            <div className="text-primary-ide font-medium text-xs">Portfolio Assistant</div>
-            <div className="text-secondary-ide text-xs">Ask about experience</div>
+          <div className="min-w-0 flex-1">
+            <div className="text-primary-ide font-medium text-xs truncate">Portfolio Assistant</div>
+            <div className="text-secondary-ide text-xs truncate">Ask about experience</div>
           </div>
-          <div className="ml-auto">
-            <Circle className="w-1.5 h-1.5 fill-current success-green" />
+          <div className="flex items-center gap-2">
+            <Circle className="w-1.5 h-1.5 fill-current success-green flex-shrink-0" />
+            {onClose && (
+              <Button
+                onClick={onClose}
+                variant="ghost"
+                size="sm"
+                className="lg:hidden h-6 w-6 p-0 text-secondary-ide hover:text-primary-ide hover:bg-hover-gray"
+              >
+                <X className="h-3 w-3" />
+              </Button>
+            )}
           </div>
         </div>
       </div>
@@ -288,7 +302,7 @@ export function ChatBot() {
                   ? 'bg-accent-blue text-white' 
                   : 'bg-editor border border-ide text-primary-ide'
               }`}>
-                <p className="text-xs">{msg.message}</p>
+                <p className="text-xs break-words">{msg.message}</p>
               </div>
               {msg.isUser && (
                 <div className="w-5 h-5 bg-secondary-ide rounded-full flex items-center justify-center flex-shrink-0">
@@ -318,19 +332,19 @@ export function ChatBot() {
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Ask about experience..."
-            className="flex-1 bg-editor border-ide text-primary-ide text-xs h-6"
+            className="flex-1 bg-editor border-ide text-primary-ide text-xs h-6 min-w-0"
             disabled={isLoading || !contextData}
           />
           <Button
             onClick={handleSend}
             disabled={!input.trim() || isLoading || !contextData}
             size="sm"
-            className="bg-accent-blue hover:bg-blue-600 text-white h-6 w-6 p-0"
+            className="bg-accent-blue hover:bg-blue-600 text-white h-6 w-6 p-0 flex-shrink-0"
           >
             <Send className="h-2.5 w-2.5" />
           </Button>
         </div>
-        <div className="text-secondary-ide text-xs mt-1">
+        <div className="text-secondary-ide text-xs mt-1 truncate">
           AI with LinkedIn context
         </div>
       </div>

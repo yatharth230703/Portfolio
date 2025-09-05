@@ -14,10 +14,10 @@ export default function Personal() {
   };
 
   return (
-    <div className="flex-1 flex h-full">
+    <div className="flex h-full">
       <LineNumbers count={30} />
       
-      <div className="flex-1 p-4 overflow-y-auto h-full">
+      <div className="flex-1 p-2 sm:p-4 overflow-y-auto h-full">
         <CodeBlock>
           <Comment>
             <span>// Personal Information Module</span><br />
@@ -32,7 +32,7 @@ export default function Personal() {
           <div className="ml-4 space-y-3">
             {/* Profile Section */}
             <Card className="bg-sidebar border-ide p-3">
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 {/* Left Side - Profile Information */}
                 <div className="flex-1">
                   <h2 className="text-lg font-semibold text-primary-ide">Yatharth Bisht</h2>
@@ -43,28 +43,28 @@ export default function Personal() {
                 {/* Right Side - Contact Links */}
                 <div className="flex-1">
                   <div className="space-y-1">
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                      <Linkedin className="h-3 w-3" />
-                      <span>linkedin.com/in/yatharth-bisht-8a559b241</span>
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                      <Linkedin className="h-3 w-3 flex-shrink-0" />
+                      <span className="truncate">linkedin.com/in/yatharth-bisht-8a559b241</span>
                     </Button>
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                      <Github className="h-3 w-3" />
-                      <span>github.com/yatharth230703</span>
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                      <Github className="h-3 w-3 flex-shrink-0" />
+                      <span className="truncate">github.com/yatharth230703</span>
                     </Button>
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                      <Mail className="h-3 w-3" />
-                      <span>vasub0723@gmail.com</span>
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                      <Mail className="h-3 w-3 flex-shrink-0" />
+                      <span className="truncate">vasub0723@gmail.com</span>
                     </Button>
                     <Button 
                       variant="ghost" 
-                      className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs"
+                      className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto"
                       onClick={handleDownloadResume}
                     >
-                      <FileText className="h-3 w-3" />
+                      <FileText className="h-3 w-3 flex-shrink-0" />
                       <span>Download Resume</span>
                     </Button>
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs">
-                      <Calendar className="h-3 w-3" />
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                      <Calendar className="h-3 w-3 flex-shrink-0" />
                       <a href="https://calendar.app.google/7qwYwYBLy8DRy2Tv9" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         Book a Call
                       </a>

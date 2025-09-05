@@ -24,23 +24,23 @@ const fileColors = {
 export function TabBar({ tabs, activeTab, onTabSelect, onTabClose }: TabBarProps) {
   return (
     <div className="bg-sidebar border-b border-ide">
-      <div className="flex">
+      <div className="flex overflow-x-auto">
         {tabs.map((tab) => (
           <div
             key={tab.path}
             onClick={() => onTabSelect(tab.path)}
             className={cn(
-              "flex items-center gap-1 px-2 py-1 text-xs border-r border-ide cursor-pointer",
+              "flex items-center gap-1 px-2 py-1 text-xs border-r border-ide cursor-pointer whitespace-nowrap flex-shrink-0",
               activeTab === tab.path 
                 ? "bg-editor text-primary-ide" 
                 : "text-secondary-ide hover:text-primary-ide"
             )}
           >
             <FileCode className={cn("h-3 w-3", fileColors[tab.icon])} />
-            <span>{tab.name}</span>
+            <span className="truncate max-w-32">{tab.name}</span>
             {onTabClose && (
               <X 
-                className="h-2.5 w-2.5 text-secondary-ide hover:text-primary-ide ml-1"
+                className="h-2.5 w-2.5 text-secondary-ide hover:text-primary-ide ml-1 flex-shrink-0"
                 onClick={(e) => {
                   e.stopPropagation();
                   onTabClose(tab.path);

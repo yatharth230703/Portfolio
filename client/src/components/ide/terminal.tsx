@@ -15,18 +15,18 @@ interface TerminalMessage {
 export function Terminal() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<TerminalMessage[]>([]);
-  const [terminalHeight, setTerminalHeight] = useState(128); // Default height: 128px (h-32)
+  const [terminalHeight, setTerminalHeight] = useState(400); // Increased default height to fill more space
   const [isResizing, setIsResizing] = useState(false);
   const resizeRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
   // Height constraints
   const MIN_HEIGHT = 40; // Just enough for the header bar
-  const MAX_HEIGHT = window.innerHeight * 0.5; // Half of the viewport height
+  const MAX_HEIGHT = window.innerHeight * 0.7; // Increased max height
   
   // Calculate optimal height based on messages
   const calculateOptimalHeight = (messageCount: number) => {
-    const baseHeight = 128; // Default height
+    const baseHeight = 400; // Increased base height to fill more space
     const messageHeight = 24; // Approximate height per message
     const padding = 32; // Extra padding for input and spacing
     
@@ -176,16 +176,43 @@ export function Terminal() {
     setIsResizing(false);
   };
 
+  // Touch handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
+    setIsResizing(true);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!isResizing) return;
+    
+    const containerRect = resizeRef.current?.getBoundingClientRect();
+    if (!containerRect) return;
+    
+    const touch = e.touches[0];
+    const newHeight = containerRect.bottom - touch.clientY;
+    const constrainedHeight = Math.max(MIN_HEIGHT, Math.min(MAX_HEIGHT, newHeight));
+    
+    setTerminalHeight(constrainedHeight);
+  };
+
+  const handleTouchEnd = () => {
+    setIsResizing(false);
+  };
+
   // Add/remove event listeners
   useEffect(() => {
     if (isResizing) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchend', handleTouchEnd);
     }
     
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
     };
   }, [isResizing]);
 
@@ -205,7 +232,7 @@ export function Terminal() {
   return (
     <div 
       ref={resizeRef}
-      className="bg-editor border-t border-ide flex-shrink-0 relative"
+      className="bg-editor border-t border-ide relative flex flex-col"
       style={{ height: `${terminalHeight}px` }}
     >
       <div 
@@ -213,11 +240,12 @@ export function Terminal() {
           terminalHeight <= MIN_HEIGHT ? 'bg-sidebar/80' : ''
         }`}
         onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
       >
         <TerminalIcon className="h-3 w-3 accent-blue" />
         <span className="text-secondary-ide">TERMINAL</span>
         {terminalHeight <= MIN_HEIGHT && (
-          <span className="text-accent-blue/60 text-xs ml-2">(Drag to expand)</span>
+          <span className="text-accent-blue/60 text-xs ml-2">(Touch & drag to expand)</span>
         )}
         <div className="flex ml-auto">
           <ArrowUpDown className="h-3 w-3 text-secondary-ide/60" />
@@ -226,7 +254,7 @@ export function Terminal() {
       
       <div className="flex-1 p-2 overflow-y-auto font-mono text-xs">
         <div className="space-y-1">
-          <div className="flex">
+          <div className="flex flex-wrap">
             <span className="success-green">portfolio@dev:~$</span>
             <span className="text-primary-ide ml-1">Send me a message directly!</span>
           </div>
@@ -241,7 +269,7 @@ export function Terminal() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="flex-1 bg-transparent text-primary-ide border-none outline-none font-mono text-xs"
+              className="flex-1 bg-transparent text-primary-ide border-none outline-none font-mono text-xs min-w-0"
               placeholder="Type message... (Email, SMS, WhatsApp & Slack)"
               disabled={sendMessageMutation.isPending}
             />
@@ -250,7 +278,7 @@ export function Terminal() {
           {/* Terminal Output */}
           <div className="space-y-1 mt-4 min-h-32 overflow-y-auto">
             {messages.map((msg, index) => (
-              <div key={index} className="text-secondary-ide text-xs py-1 px-2 rounded">
+              <div key={index} className="text-secondary-ide text-xs py-1 px-2 rounded break-words">
                 <span className={
                   msg.type === "sent" ? "success-green" : 
                   msg.type === "error" ? "text-red-400" : 
@@ -262,7 +290,9 @@ export function Terminal() {
                     msg.type === "platform" ? msg.platform?.toUpperCase() || "PLATFORM" :
                     "STATUS"}]
                 </span>{" "}
-                {msg.type === "sent" ? `Sent: "${msg.content}"` : msg.content}
+                <span className="break-words">
+                  {msg.type === "sent" ? `Sent: "${msg.content}"` : msg.content}
+                </span>
               </div>
             ))}
           </div>

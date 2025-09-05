@@ -202,10 +202,10 @@ export default function Projects() {
   }
 
   return (
-    <div className="flex-1 flex h-full">
+    <div className="flex h-full">
       <LineNumbers count={30} />
       
-      <div className="flex-1 p-4 overflow-y-auto h-full">
+      <div className="flex-1 p-2 sm:p-4 overflow-y-auto h-full">
         <CodeBlock>
           <Comment>
             <span># Projects Portfolio Module</span><br />
@@ -228,13 +228,15 @@ export default function Projects() {
                     key={category.key}
                     variant="ghost"
                     onClick={() => handleCategoryChange(category.key)}
-                    className={`text-xs px-3 py-1 h-auto transition-all ${
+                    className={`text-xs px-2 sm:px-3 py-1 h-auto transition-all ${
                       selectedCategory === category.key
                         ? `${category.color} text-white`
                         : 'text-primary-ide hover:text-warning-orange'
                     }`}
                   >
-                    {category.label} ({getProjectCount(category.key)})
+                    <span className="hidden sm:inline">{category.label}</span>
+                    <span className="sm:hidden">{category.label.split(' ')[0]}</span>
+                    <span className="ml-1">({getProjectCount(category.key)})</span>
                   </Button>
                 ))}
               </div>
@@ -296,7 +298,7 @@ export default function Projects() {
                             : 'opacity-70 hover:opacity-90'
                         }`}
                       >
-                        <Card className={`bg-sidebar border-ide p-3 h-full mx-1 transition-all duration-300 ${
+                        <Card className={`bg-sidebar border-ide p-2 sm:p-3 h-full mx-1 transition-all duration-300 ${
                           selectedProject?.title === project.title 
                             ? 'border-accent-blue shadow-lg ring-2 ring-accent-blue/20' 
                             : 'hover:border-warning-orange hover:shadow-md'
@@ -304,9 +306,9 @@ export default function Projects() {
                           <img 
                             src={project.image}
                             alt={project.title}
-                            className="rounded-lg w-full h-24 object-cover border border-ide mb-3"
+                            className="rounded-lg w-full h-20 sm:h-24 object-cover border border-ide mb-2 sm:mb-3"
                           />
-                          <h3 className="text-sm warning-orange mb-2 line-clamp-2 h-8">{project.title}</h3>
+                          <h3 className="text-xs sm:text-sm warning-orange mb-2 line-clamp-2 h-6 sm:h-8">{project.title}</h3>
                           <div className="flex gap-1 flex-wrap">
                             {getTechStack(project.display_tech_stack).map((tech) => (
                               <Badge 
@@ -325,7 +327,7 @@ export default function Projects() {
               
               {/* Detailed Project View */}
               {selectedProject && (
-                <Card className={`bg-sidebar border-ide p-4 border-accent-blue transition-all duration-500 ease-out ${
+                <Card className={`bg-sidebar border-ide p-3 sm:p-4 border-accent-blue transition-all duration-500 ease-out ${
                   isAnimating 
                     ? 'animate-in slide-in-from-bottom-4 fade-in-0' 
                     : 'animate-in slide-in-from-bottom-2 fade-in-0'
@@ -337,14 +339,14 @@ export default function Projects() {
                       <img 
                         src={selectedProject.image}
                         alt={selectedProject.title}
-                        className="rounded-lg w-full h-48 object-cover border border-ide"
+                        className="rounded-lg w-full h-40 sm:h-48 object-cover border border-ide"
                       />
                     </div>
                     <div className={`transition-all duration-500 ease-out delay-100 ${
                       isAnimating ? 'animate-in slide-in-from-right-4 fade-in-0' : ''
                     }`}>
-                      <h3 className="text-xl warning-orange mb-3">{selectedProject.title}</h3>
-                      <p className="text-primary-ide mb-4 leading-relaxed text-sm">
+                      <h3 className="text-lg sm:text-xl warning-orange mb-3">{selectedProject.title}</h3>
+                      <p className="text-primary-ide mb-4 leading-relaxed text-xs sm:text-sm">
                         {selectedProject.description}
                       </p>
                       <div className="flex gap-1 mb-4 flex-wrap">
@@ -360,10 +362,10 @@ export default function Projects() {
                       <div className="flex gap-3">
                         <Button 
                           variant="ghost" 
-                          className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto text-sm"
+                          className="flex items-center gap-2 text-accent-blue hover:text-warning-orange p-0 h-auto text-xs sm:text-sm"
                           onClick={() => window.open(selectedProject.link, '_blank')}
                         >
-                          <Github className="h-4 w-4" />
+                          <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                           <span>View Code</span>
                         </Button>
                       </div>

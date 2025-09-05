@@ -30,7 +30,7 @@ const fileColors = {
 
 export function FileExplorer({ files, onFileSelect, activeFile }: FileExplorerProps) {
   return (
-    <div className="w-48 bg-sidebar border-r border-ide flex flex-col">
+    <div className="w-48 lg:w-48 xl:w-56 bg-sidebar border-r border-ide flex flex-col">
       {/* Explorer Header */}
       <div className="p-2 border-b border-ide">
         <div className="flex items-center gap-1 text-secondary-ide text-xs">
@@ -52,14 +52,14 @@ export function FileExplorer({ files, onFileSelect, activeFile }: FileExplorerPr
               )}
             >
               <FileCode className={cn("h-3 w-3", fileColors[file.icon])} />
-              <span>{file.name}</span>
+              <span className="truncate">{file.name}</span>
             </div>
           ))}
         </div>
       </div>
       
-      {/* Profile Photo Section */}
-      <div className="p-2 border-t border-ide flex flex-col items-center">
+      {/* Profile Photo Section - Hidden on smaller screens */}
+      <div className="hidden xl:flex p-2 border-t border-ide flex-col items-center">
         <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-ide">
           <img 
             src="/profile_photo.webp" 

@@ -7,11 +7,13 @@ interface LineNumbersProps {
 
 export function LineNumbers({ count, className }: LineNumbersProps) {
   return (
-    <div className={cn("w-8 bg-editor border-r border-ide py-2 text-right text-secondary-ide text-xs font-mono", className)}>
-      <div className="space-y-0.5 px-1">
-        {Array.from({ length: count }, (_, i) => (
-          <div key={i + 1}>{i + 1}</div>
-        ))}
+    <div className={cn("w-8 bg-editor border-r border-ide text-right text-secondary-ide text-xs font-mono flex flex-col h-full min-h-full", className)}>
+      <div className="flex-1 py-2">
+        <div className="space-y-0.5 px-1">
+          {Array.from({ length: count }, (_, i) => (
+            <div key={i + 1}>{i + 1}</div>
+          ))}
+        </div>
       </div>
     </div>
   );

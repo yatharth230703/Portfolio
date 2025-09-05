@@ -144,10 +144,10 @@ export default function Experience() {
   }
 
   return (
-    <div className="flex-1 flex h-full">
+    <div className="flex h-full">
       <LineNumbers count={30} />
       
-      <div className="flex-1 p-4 overflow-y-auto h-full">
+      <div className="flex-1 p-2 sm:p-4 overflow-y-auto h-full">
         <CodeBlock>
           <Comment>
             <span>// Professional Experience Timeline</span><br />
@@ -186,22 +186,22 @@ export default function Experience() {
                 };
                 
                 return (
-                  <div key={exp.id} className="flex gap-3 relative">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 ${getBackgroundClass(exp.color)}`}>
-                      <IconComponent className="h-3 w-3 text-white" />
+                  <div key={exp.id} className="flex gap-2 sm:gap-3 relative">
+                    <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 ${getBackgroundClass(exp.color)}`}>
+                      <IconComponent className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-white" />
                     </div>
-                    <Card className="flex-1 bg-sidebar border-ide p-3">
+                    <Card className="flex-1 bg-sidebar border-ide p-2 sm:p-3">
                       <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <h3 className="text-sm warning-orange">{exp.title}</h3>
-                          <p className="accent-blue text-xs">{exp.company}</p>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-xs sm:text-sm warning-orange truncate">{exp.title}</h3>
+                          <p className="accent-blue text-xs truncate">{exp.company}</p>
                           <p className="text-secondary-ide text-xs">{exp.duration}</p>
                         </div>
-                        <div className={`w-8 h-8 rounded flex items-center justify-center ${getBackgroundClass(exp.color)}`}>
-                          <CompanyIconComponent className="h-3 w-3 text-white" />
+                        <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded flex items-center justify-center flex-shrink-0 ${getBackgroundClass(exp.color)}`}>
+                          <CompanyIconComponent className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-white" />
                         </div>
                       </div>
-                      <p className="text-primary-ide mb-2 text-xs">
+                      <p className="text-primary-ide mb-2 text-xs break-words">
                         {exp.description}
                       </p>
                       <div className="flex gap-1 flex-wrap">
