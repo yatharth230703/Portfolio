@@ -308,8 +308,8 @@ export default function Projects() {
                             alt={project.title}
                             className="rounded-lg w-full h-20 sm:h-24 object-cover border border-ide mb-2 sm:mb-3"
                           />
-                          <h3 className="text-xs sm:text-sm warning-orange mb-2 line-clamp-2 h-6 sm:h-8">{project.title}</h3>
-                          <div className="flex gap-1 flex-wrap min-h-0">
+                          <h3 className="text-xs sm:text-sm warning-orange mb-2 line-clamp-2 min-h-[2rem] sm:min-h-[2rem]">{project.title}</h3>
+                          <div className="hidden sm:flex gap-1 flex-wrap min-h-0">
                             {getTechStack(project.display_tech_stack).map((tech) => (
                               <Badge 
                                 key={tech}
