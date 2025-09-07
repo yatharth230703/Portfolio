@@ -91,13 +91,9 @@ export default function Portfolio() {
         />
       </div>
       
-      <div className={`flex-1 flex flex-col min-w-0 h-screen ${
-        isMobile && !isChatOpen ? 'w-full' : ''
-      }`}>
+      <div className="flex-1 flex flex-col min-w-0 h-screen">
         {/* Mobile: Show file explorer as horizontal tabs */}
-        <div className={`lg:hidden bg-sidebar border-b border-ide p-2 transition-all duration-300 ${
-          isChatOpen ? 'opacity-0 h-0 p-0 overflow-hidden' : 'opacity-100'
-        }`}>
+        <div className="lg:hidden bg-sidebar border-b border-ide p-2">
           <div className="flex gap-1 overflow-x-auto">
             {files.map((file) => (
               <div
@@ -149,21 +145,30 @@ export default function Portfolio() {
       </div>
       
       {/* Chatbot - Toggleable on mobile, always visible on desktop */}
-      <div className={`flex-shrink-0 transition-all duration-500 ease-in-out ${
-        isMobile 
-          ? (isChatOpen 
-              ? 'w-40 sm:w-48 opacity-100 translate-x-0 chat-slide-in' 
-              : 'hidden')
-          : 'w-64 xl:w-72 opacity-100'
-      }`}>
-        <div className={`h-full transition-all duration-500 ease-in-out ${
-          isMobile 
-            ? (isChatOpen ? 'opacity-100 chat-bounce-in' : 'opacity-0')
-            : 'opacity-100'
-        }`}>
-          <ChatBot {...(isMobile ? { onClose: toggleChat } : {})} />
+      {isMobile ? (
+        <>
+          {/* Mobile Overlay Backdrop */}
+          {isChatOpen && (
+            <div 
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300"
+              onClick={toggleChat}
+            />
+          )}
+          
+          {/* Mobile Chatbot Overlay */}
+          <div className={`fixed top-0 right-0 h-full w-[70%] z-50 transition-transform duration-300 ease-in-out ${
+            isChatOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}>
+            <ChatBot onClose={toggleChat} />
+          </div>
+        </>
+      ) : (
+        <div className="flex-shrink-0 w-64 xl:w-72 opacity-100">
+          <div className="h-full opacity-100">
+            <ChatBot />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
