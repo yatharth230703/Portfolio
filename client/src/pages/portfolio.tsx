@@ -11,9 +11,11 @@ import Projects from "./projects";
 import Experience from "./experience";
 
 const files = [
-  { name: "1_personal.rs", path: "personal", icon: "rust" as const },
-  { name: "2_projects.py", path: "projects", icon: "python" as const },
-  { name: "3_experience.cpp", path: "experience", icon: "cpp" as const },
+  { name: "Personal.rs", path: "personal", icon: "rust" as const },
+  { name: "Projects.py", path: "projects", icon: "python" as const },
+  { name: "Experience.cpp", path: "experience", icon: "cpp" as const },
+  { name: "Chat.java", path: "chat", icon: "java" as const },
+  { name: "Direct_Message.js", path: "direct-message", icon: "javascript" as const },
 ];
 
 export default function Portfolio() {
@@ -21,6 +23,7 @@ export default function Portfolio() {
   const [openTabs, setOpenTabs] = useState<string[]>(["personal"]);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTerminalExpanded, setIsTerminalExpanded] = useState(false);
   
   const currentPath = location === "/" ? "personal" : location.slice(1);
 
@@ -37,6 +40,20 @@ export default function Portfolio() {
   }, []);
   
   const handleFileSelect = (path: string) => {
+    if (path === "chat") {
+      // For Chat.java - open chatbot directly in mobile mode
+      if (isMobile) {
+        setIsChatOpen(true);
+      }
+      return;
+    }
+    
+    if (path === "direct-message") {
+      // For Direct_Message.js - expand terminal to maximum
+      setIsTerminalExpanded(true);
+      return;
+    }
+    
     setLocation(`/${path}`);
     if (!openTabs.includes(path)) {
       setOpenTabs([...openTabs, path]);
@@ -108,17 +125,6 @@ export default function Portfolio() {
                 <span className="text-xs">{file.name}</span>
               </div>
             ))}
-            {/* Chat Toggle Button */}
-            <div
-              onClick={toggleChat}
-              className={`flex items-center justify-center p-1 cursor-pointer transition-colors duration-200 ${
-                isChatOpen 
-                  ? "text-accent-blue" 
-                  : "text-secondary-ide hover:text-primary-ide"
-              }`}
-            >
-              <MessageCircle className="h-3 w-3" />
-            </div>
           </div>
         </div>
         
@@ -139,7 +145,7 @@ export default function Portfolio() {
         <div className="flex">
           <div className="w-8 bg-editor border-r border-ide"></div>
           <div className="flex-1">
-            <Terminal />
+            <Terminal isExpanded={isTerminalExpanded} onExpandedChange={setIsTerminalExpanded} />
           </div>
         </div>
       </div>

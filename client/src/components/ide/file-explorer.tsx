@@ -4,7 +4,7 @@ import { FileCode, Folder, FolderOpen, Circle } from "lucide-react";
 interface FileItem {
   name: string;
   path: string;
-  icon: "rust" | "python" | "cpp" | "javascript";
+  icon: "rust" | "python" | "cpp" | "javascript" | "java";
   active?: boolean;
 }
 
@@ -18,14 +18,16 @@ const fileIcons = {
   rust: "🦀",
   python: "🐍", 
   cpp: "⚡",
-  javascript: "📜"
+  javascript: "📜",
+  java: "☕"
 };
 
 const fileColors = {
   rust: "warning-orange",
   python: "accent-blue", 
   cpp: "success-green",
-  javascript: "warning-orange"
+  javascript: "warning-orange",
+  java: "accent-blue"
 };
 
 export function FileExplorer({ files, onFileSelect, activeFile }: FileExplorerProps) {
@@ -55,17 +57,6 @@ export function FileExplorer({ files, onFileSelect, activeFile }: FileExplorerPr
               <span className="truncate">{file.name}</span>
             </div>
           ))}
-        </div>
-      </div>
-      
-      {/* Profile Photo Section - Hidden on smaller screens */}
-      <div className="hidden xl:flex p-2 border-t border-ide flex-col items-center">
-        <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-ide">
-          <img 
-            src="/profile_photo.webp" 
-            alt="Yatharth Bisht" 
-            className="w-full h-full object-cover"
-          />
         </div>
       </div>
       

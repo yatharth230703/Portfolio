@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { FileCode, X } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 interface Tab {
   name: string;
@@ -49,6 +50,11 @@ export function TabBar({ tabs, activeTab, onTabSelect, onTabClose }: TabBarProps
             )}
           </div>
         ))}
+        
+        {/* Theme Toggle Button */}
+        <div className="ml-auto flex items-center px-2 border-l border-ide">
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );

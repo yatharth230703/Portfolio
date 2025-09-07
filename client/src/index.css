@@ -24,19 +24,19 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
 
-  /* IDE-specific colors */
-  --editor-bg: hsl(0, 0%, 10.2%);
-  --sidebar-bg: hsl(0, 0%, 17.6%);
-  --accent-blue: hsl(207, 90%, 54%);
-  --success-green: hsl(122, 39%, 49%);
-  --warning-orange: hsl(39, 100%, 50%);
+  /* IDE-specific colors - Default theme (Original) - These will be overridden by theme context */
+  --editor-bg: #1A1A1A;
+  --sidebar-bg: #2D2D2D;
+  --accent-blue: #007ACC;
+  --success-green: #267F99;
+  --warning-orange: #D16969;
   --accent-pink: hsl(330, 81%, 60%);
   --accent-purple: hsl(270, 95%, 75%);
   --accent-cyan: hsl(180, 100%, 50%);
-  --text-primary: hsl(0, 0%, 87.8%);
-  --text-secondary: hsl(0, 0%, 62.7%);
-  --border-gray: hsl(0, 0%, 24.3%);
-  --hover-gray: hsl(0, 0%, 25.1%);
+  --text-primary: #E0E0E0;
+  --text-secondary: #B0B0B0;
+  --border-gray: #404040;
+  --hover-gray: #353535;
 }
 
 .dark {
@@ -86,7 +86,9 @@
   }
   
   .border-ide {
-    border-color: var(--border-gray);
+    border-color: var(--border-gray) !important;
+    border-width: 0.5px !important;
+    border-style: solid !important;
   }
   
   .text-primary-ide {

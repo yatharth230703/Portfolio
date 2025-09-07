@@ -12,7 +12,12 @@ interface TerminalMessage {
   success?: boolean;
 }
 
-export function Terminal() {
+interface TerminalProps {
+  isExpanded?: boolean;
+  onExpandedChange?: (expanded: boolean) => void;
+}
+
+export function Terminal({ isExpanded = false, onExpandedChange }: TerminalProps) {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<TerminalMessage[]>([]);
   const [terminalHeight, setTerminalHeight] = useState(400); // Increased default height to fill more space
@@ -237,6 +242,14 @@ export function Terminal() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [terminalHeight]);
+
+  // Handle external expansion
+  useEffect(() => {
+    if (isExpanded) {
+      setTerminalHeight(MAX_HEIGHT);
+      onExpandedChange?.(false); // Reset the external state
+    }
+  }, [isExpanded, onExpandedChange]);
 
   return (
     <div 
