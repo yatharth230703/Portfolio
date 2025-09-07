@@ -33,41 +33,51 @@ export default function Personal() {
             {/* Profile Section */}
             <Card className="bg-sidebar border-ide p-3">
               <div className="flex flex-col sm:flex-row gap-4">
-                {/* Left Side - Profile Information */}
-                <div className="flex-1">
-                  <h2 className="text-lg font-semibold text-primary-ide">Yatharth Bisht</h2>
-                  <p className="text-secondary-ide text-sm">AI Developer & Full-Stack Engineer</p>
-                  <p className="text-secondary-ide text-xs">B.Tech Computer Engineering @ DTU</p>
+                {/* Left Side - Profile Photo */}
+                <div className="flex-shrink-0">
+                  <img 
+                    src="/profile_photo.webp" 
+                    alt="Yatharth Bisht" 
+                    className="w-32 h-32 rounded-lg object-cover border border-ide"
+                  />
                 </div>
                 
-                {/* Right Side - Contact Links */}
-                <div className="flex-1">
-                  <div className="space-y-1">
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                {/* Right Side - Profile Information and Links */}
+                <div className="flex-1 flex flex-col justify-center">
+                  {/* Personal Information */}
+                  <div className="mb-3">
+                    <h2 className="text-lg font-semibold text-primary-ide">Yatharth Bisht</h2>
+                    <p className="text-secondary-ide text-sm">AI Developer & Full-Stack Engineer</p>
+                    <p className="text-secondary-ide text-xs">B.Tech Computer Engineering @ DTU</p>
+                  </div>
+                  
+                  {/* Social Links in Single Line */}
+                  <div className="flex flex-wrap gap-3">
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto text-xs">
                       <Linkedin className="h-3 w-3 flex-shrink-0" />
                       <a href="https://linkedin.com/in/yatharth-bisht-8a559b241" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         LinkedIn
                       </a>
                     </Button>
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto text-xs">
                       <Github className="h-3 w-3 flex-shrink-0" />
                       <a href="https://github.com/yatharth230703" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         Github
                       </a>
                     </Button>
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto text-xs">
                       <Mail className="h-3 w-3 flex-shrink-0" />
                       <span className="truncate">vasub0723@gmail.com</span>
                     </Button>
                     <Button 
                       variant="ghost" 
-                      className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto"
+                      className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto text-xs"
                       onClick={handleDownloadResume}
                     >
                       <FileText className="h-3 w-3 flex-shrink-0" />
                       <span>Download Resume</span>
                     </Button>
-                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto justify-start text-xs w-full sm:w-auto">
+                    <Button variant="ghost" className="flex items-center gap-2 text-red-400 hover:text-warning-orange p-0 h-auto text-xs">
                       <Calendar className="h-3 w-3 flex-shrink-0" />
                       <a href="https://calendar.app.google/7qwYwYBLy8DRy2Tv9" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         Book a Call

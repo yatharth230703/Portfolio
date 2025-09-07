@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { Terminal as TerminalIcon, ArrowUpDown } from "lucide-react";
+import { Terminal as TerminalIcon, ArrowUpDown, ChevronDown, ChevronUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 
@@ -22,7 +22,7 @@ export function Terminal() {
 
   // Height constraints
   const MIN_HEIGHT = 40; // Just enough for the header bar
-  const MAX_HEIGHT = window.innerHeight * 0.7; // Increased max height
+  const MAX_HEIGHT = window.innerHeight * 0.4; // 40% of screen height
   
   // Calculate optimal height based on messages
   const calculateOptimalHeight = (messageCount: number) => {
@@ -199,6 +199,15 @@ export function Terminal() {
     setIsResizing(false);
   };
 
+  // Collapse and expand handlers
+  const handleCollapse = () => {
+    setTerminalHeight(MIN_HEIGHT);
+  };
+
+  const handleExpand = () => {
+    setTerminalHeight(MAX_HEIGHT);
+  };
+
   // Add/remove event listeners
   useEffect(() => {
     if (isResizing) {
@@ -219,7 +228,7 @@ export function Terminal() {
   // Update max height when window resizes
   useEffect(() => {
     const handleResize = () => {
-      const newMaxHeight = window.innerHeight * 0.5;
+      const newMaxHeight = window.innerHeight * 0.4;
       if (terminalHeight > newMaxHeight) {
         setTerminalHeight(newMaxHeight);
       }
@@ -247,7 +256,21 @@ export function Terminal() {
         {terminalHeight <= MIN_HEIGHT && (
           <span className="text-accent-blue/60 text-xs ml-2">(Touch & drag to expand)</span>
         )}
-        <div className="flex ml-auto">
+        <div className="flex ml-auto gap-1">
+          <button
+            onClick={handleCollapse}
+            className="p-1 hover:bg-ide/50 rounded transition-colors"
+            title="Collapse terminal"
+          >
+            <ChevronDown className="h-3 w-3 text-secondary-ide/60 hover:text-secondary-ide" />
+          </button>
+          <button
+            onClick={handleExpand}
+            className="p-1 hover:bg-ide/50 rounded transition-colors"
+            title="Expand terminal"
+          >
+            <ChevronUp className="h-3 w-3 text-secondary-ide/60 hover:text-secondary-ide" />
+          </button>
           <ArrowUpDown className="h-3 w-3 text-secondary-ide/60" />
         </div>
       </div>
