@@ -125,11 +125,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     root.style.setProperty('--border-gray', colors.sidebar + '40'); // 25% opacity
     root.style.setProperty('--hover-gray', colors.sidebar + '60'); // 37% opacity
     
-    // Set border color based on theme
+    // Set border color based on theme with transparency
     if (theme === 'light-plus') {
-      root.style.setProperty('--border-gray', '#000000'); // Black borders for light theme
+      root.style.setProperty('--border-gray', 'rgba(0, 0, 0, 0.3)'); // Semi-transparent black borders for light theme
     } else {
-      root.style.setProperty('--border-gray', '#FFFFFF'); // White borders for all other themes
+      root.style.setProperty('--border-gray', 'rgba(255, 255, 255, 0.3)'); // Semi-transparent white borders for all other themes
     }
     
     // Update highlight colors
