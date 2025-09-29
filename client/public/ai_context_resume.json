@@ -1,140 +1,140 @@
 {
-    "personal_info": {
-      "name": "Yatharth Bisht",
-      "student_id": "2K22/CO/517",
-      "phone": "+91 8882359577",
-      "email": "vasub0723@gmail.com",
-      "linkedin": "https://www.linkedin.com/in/yatharth-bisht-8a559b241/",
-      "github": "https://github.com/yatharth230703"
+  "personal_info": {
+    "name": "Yatharth Bisht",
+    "student_id": "2K22/CO/517",
+    "phone": "+91 8882359577",
+    "email": "vasub0723@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/yatharth-bisht-8a559b241/",
+    "github": "https://github.com/yatharth230703"
+  },
+  "education": [
+    {
+      "course": "B.Tech (Computer Engineering)",
+      "year": "2022-2026",
+      "institute": "Delhi Technological University, New Delhi",
+      "grade": "8.51 CGPA"
     },
-    "education": [
-      {
-        "course": "B.Tech (Computer Engineering)",
-        "year": "2022-2026",
-        "institute": "Delhi Technological University, New Delhi",
-        "grade": "8.46 CGPA"
-      },
-      {
-        "course": "CBSE (Class XII)",
-        "year": "2021",
-        "institute": "Banyan Tree School, Delhi",
-        "grade": "95.8 %"
-      },
-      {
-        "course": "CBSE (Class X)",
-        "year": "2019",
-        "institute": "Banyan Tree School, Delhi",
-        "grade": "94.6 %"
-      }
-    ],
-    "experience": [
-      {
-        "role": "Founding Engineer",
-        "organization": "SCAILE Technologies",
-        "location": "Hybrid-Portugal",
-        "duration": "June 2024 – Present",
-        "responsibilities": [
-          "Troubleshooting tech-related problems, refactoring and optimizing code, deploying projects on modal cloud",
-          "Building Leadform, a fullstack based form-generation service for managing leads"
-        ]
-      },
-      {
-        "role": "AI Automation and Marketing Intern",
-        "organization": "NewNative X LabLabAI",
-        "location": "Remote-Sweden",
-        "duration": "February 2025 - April 2025",
-        "responsibilities": [
-          "Automated marketing workflows using N8N, LlamaIndex, and AI agents",
-          "Reduced manual effort by 40% for a GenAI hackathon platform with 200,000+ members"
-        ]
-      },
-      {
-        "role": "Software Engineering Intern",
-        "organization": "Cobalt",
-        "location": "Remote-Bangalore, India",
-        "duration": "October 2024 – January 2025",
-        "responsibilities": [
-          "Engineered, built, and tested seamless app integrations",
-          "Implemented autonomous AI agents that dynamically generated integration methods"
-        ]
-      },
-      {
-        "role": "Research Intern",
-        "organization": "IIT-Delhi",
-        "location": "Hybrid-New Delhi, India",
-        "duration": "July 2024 - October 2024",
-        "responsibilities": [
-          "Constructed a deep learning-based computer vision model for waste classification",
-          "Improved sorting efficiency by 35%"
-        ]
-      }
-    ],
-    "technical_proficiency": {
-      "coursework": [
-        "DSA", "OOPS", "DBMS", "Compiler Design", "TOC",
-        "Computer Networks", "Discrete Mathematics", "Software Engineering", "COA"
-      ],
-      "programming": [
-        "HTML", "CSS", "Javascript", "C", "C++", "Python", "Jupyter", "Rust",
-        "ExpressJS", "NodeJS", "Flask"
-      ],
-      "machine_learning": [
-        "CNNs", "NLP", "RAG", "GANs", "Diffusion", "Predictive Modelling",
-        "Statistical Models", "LLMs", "Finetuning", "Computer Vision"
-      ],
-      "libraries_utilities": [
-        "Github", "Pycharm", "Tensorflow", "Pandas", "Pytorch",
-        "Seaborn", "OpenCV", "Docker", "Streamlit", "Ultralytics"
-      ],
-      "webscraping_automation": [
-        "Requests", "Beautiful Soup", "Selenium", "Playwright",
-        "Firecrawl", "Unstructured"
-      ],
-      "tools": [
-        "HuggingFace", "Canva", "Figma", "Airtable", "MS Office",
-        "StableDiffusionXL", "Kaggle", "Roboflow", "Bootstrap", "Tailwind", "ClipChamp"
-      ],
-      "databases": [
-        "Apache Kafka (beginner)", "MongoDB", "MySQL", "Neo4J", "ChromaDB", "Weaviate"
-      ],
-      "generative_ai": [
-        "LlamaIndex", "Langchain", "Lang-graph", "CrewAI", "Gemini",
-        "OpenAI", "Groq", "Agentic Systems", "N8N", "Stack.AI"
+    {
+      "course": "CBSE (Class XII)",
+      "year": "2021",
+      "institute": "Banyan Tree School, Delhi",
+      "grade": "95.8 %"
+    },
+    {
+      "course": "CBSE (Class X)",
+      "year": "2019",
+      "institute": "Banyan Tree School, Delhi",
+      "grade": "94.6 %"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Founding Engineer",
+      "organization": "SCAILE Technologies",
+      "location": "Hybrid-Germany",
+      "duration": "May 2025 - September 2025",
+      "responsibilities": [
+        "Troubleshooting tech-related problems, refactoring and optimizing code, deploying projects on modal cloud",
+        "Building Leadform, a fullstack based form-generation service for managing leads",
+        "Started working as part-time contractor ,then intern and finally a Founding Engineer"
       ]
     },
-    "projects": [
-      {
-        "name": "SEO Backlinking Bot",
-        "type": "Bot",
-        "technologies": ["Playwright", "Gemini", "2CAPTCHA", "Gmail API"],
-        "description": "Bot pipeline to register businesses on directories, handle popups and captchas, and automate business info entry"
-      },
-      {
-        "name": "OpenAPI Spec Generation Agent",
-        "type": "AI Agent",
-        "technologies": ["LLMs", "Automation", "OpenAPI", "Gemini"],
-        "description": "Agent that processes 400,000+ tokens to generate OpenAPI specs for CRMs"
-      }
-    ],
-    "positions_of_responsibility": [
-      "IGTS-DTU (President)",
-      "Sahitya-DTU (Joint Secretary)",
-      "Technical Council-DTU (Joint Treasurer)"
-    ],
-    "leadership_teamwork": {
-      "leadership": "Organized Invictus’25 with over 20,000 attendees and 2.18M impressions on Unstop",
-      "teamwork": "Built 10+ real-life hackathon solutions and provided freelance development services"
+    {
+      "role": "AI Automation and Marketing Intern",
+      "organization": "NewNative X LabLabAI",
+      "location": "Remote-Sweden",
+      "duration": "February 2025 - April 2025",
+      "responsibilities": [
+        "Automated marketing workflows using N8N, LlamaIndex, and AI agents",
+        "Reduced manual effort by 40% for a GenAI hackathon platform with 200,000+ members"
+      ]
     },
-    "certifications_achievements": [
-      "Certifications in Machine Learning Specialization, Deep Learning Specialization, FineTuning LLMs, Pretraining LLMs",
-      "Solved 700+ DSA problems on LeetCode, CodeStudio, TUF+",
-      "Rated 1200+ on Codeforces, 1400+ on CodeChef",
-      "Collaborator on CrewAI open-source project",
-      "State finalist at RBI 90 Quiz",
-      "Selected for IITB-RISC research summit",
-      "Amazon ML Challenge national rank 135/700,000",
-      "Global rank 4 on CodeChef Starters 159",
-      "Global rank 198 on Kaggle Playground S4E6 (3000+ participants)"
+    {
+      "role": "Software Engineering Intern",
+      "organization": "Cobalt",
+      "location": "Remote-Bangalore, India",
+      "duration": "October 2024 – January 2025",
+      "responsibilities": [
+        "Engineered, built, and tested seamless app integrations",
+        "Implemented autonomous AI agents that dynamically generated integration methods"
+      ]
+    },
+    {
+      "role": "Research Intern",
+      "organization": "IIT-Delhi",
+      "location": "Hybrid-New Delhi, India",
+      "duration": "July 2024 - October 2024",
+      "responsibilities": [
+        "Constructed a deep learning-based computer vision model for waste classification",
+        "Improved sorting efficiency by 35%"
+      ]
+    }
+  ],
+  "technical_proficiency": {
+    "coursework": [
+      "DSA", "OOPS", "DBMS", "Compiler Design", "TOC",
+      "Computer Networks", "Discrete Mathematics", "Software Engineering", "COA"
+    ],
+    "programming": [
+      "HTML", "CSS", "Javascript", "C", "C++", "Python", "Jupyter", "Rust",
+      "ExpressJS", "NodeJS", "Flask"
+    ],
+    "machine_learning": [
+      "CNNs", "NLP", "RAG", "GANs", "Diffusion", "Predictive Modelling",
+      "Statistical Models", "LLMs", "Finetuning", "Computer Vision"
+    ],
+    "libraries_utilities": [
+      "Github", "Pycharm", "Tensorflow", "Pandas", "Pytorch",
+      "Seaborn", "OpenCV", "Docker", "Streamlit", "Ultralytics"
+    ],
+    "webscraping_automation": [
+      "Requests", "Beautiful Soup", "Selenium", "Playwright",
+      "Firecrawl", "Unstructured"
+    ],
+    "tools": [
+      "HuggingFace", "Canva", "Figma", "Airtable", "MS Office",
+      "StableDiffusionXL", "Kaggle", "Roboflow", "Bootstrap", "Tailwind", "ClipChamp"
+    ],
+    "databases": [
+      "Apache Kafka (beginner)", "MongoDB", "MySQL", "Neo4J", "ChromaDB", "Weaviate"
+    ],
+    "generative_ai": [
+      "LlamaIndex", "Langchain", "Lang-graph", "CrewAI", "Gemini",
+      "OpenAI", "Groq", "Agentic Systems", "N8N", "Stack.AI"
     ]
-  }
-  
+  },
+  "projects": [
+    {
+      "name": "SEO Backlinking Bot",
+      "type": "Bot",
+      "technologies": ["Playwright", "Gemini", "2CAPTCHA", "Gmail API"],
+      "description": "Bot pipeline to register businesses on directories, handle popups and captchas, and automate business info entry"
+    },
+    {
+      "name": "OpenAPI Spec Generation Agent",
+      "type": "AI Agent",
+      "technologies": ["LLMs", "Automation", "OpenAPI", "Gemini"],
+      "description": "Agent that processes 400,000+ tokens to generate OpenAPI specs for CRMs"
+    }
+  ],
+  "positions_of_responsibility": [
+    "IGTS-DTU (President)",
+    "Sahitya-DTU (Joint Secretary)",
+    "Technical Council-DTU (Joint Treasurer)"
+  ],
+  "leadership_teamwork": {
+    "leadership": "Organized Invictus’25 with over 20,000 attendees and 2.18M impressions on Unstop",
+    "teamwork": "Built 10+ real-life hackathon solutions and provided freelance development services"
+  },
+  "certifications_achievements": [
+    "Certifications in Machine Learning Specialization, Deep Learning Specialization, FineTuning LLMs, Pretraining LLMs",
+    "Solved 700+ DSA problems on LeetCode, CodeStudio, TUF+",
+    "Rated 1200+ on Codeforces, 1400+ on CodeChef",
+    "Collaborator on CrewAI open-source project",
+    "State finalist at RBI 90 Quiz",
+    "Selected for IITB-RISC research summit",
+    "Amazon ML Challenge national rank 135/700,000",
+    "Global rank 4 on CodeChef Starters 159",
+    "Global rank 198 on Kaggle Playground S4E6 (3000+ participants)"
+  ]
+}
