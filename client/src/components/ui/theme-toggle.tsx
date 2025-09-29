@@ -37,7 +37,7 @@ export function ThemeToggle() {
 
       {isOpen && createPortal(
         <div 
-          className="fixed w-48 bg-sidebar border border-ide rounded-md shadow-lg z-50"
+          className="fixed w-48 bg-sidebar/90 backdrop-blur-sm border border-ide rounded-md shadow-lg z-50"
           style={{
             top: getButtonPosition().top,
             left: getButtonPosition().left
