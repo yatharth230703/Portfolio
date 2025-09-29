@@ -22,7 +22,7 @@ export default function Personal() {
           <Comment>
             <span>// Personal Information Module</span><br />
             <span>// Author: Yatharth Bisht</span><br />
-            <span>// Description: AI Developer & Full-Stack Engineer Profile</span>
+            <span>// Description: AI Developer & Software Developer Profile</span>
           </Comment>
           
           <div>
@@ -92,10 +92,8 @@ export default function Personal() {
             <Card className="bg-sidebar border-ide p-3">
               <h3 className="text-sm font-semibold text-red-400 mb-2">About Me</h3>
               <p className="text-primary-ide leading-relaxed text-xs">
-                Pre-final year student at DTU passionate about AI and Generative AI. I believe in learning by building - 
-                from detection models to nano-GPT for Shakespearean verse generation. Currently building a startup in AI 
-                and have collaborated with Langchain's cofounder. Deeply passionate about GenAI, RAG systems, and 
-                intelligent AI agents.
+                Final year student at DTU, passionate about AI and Automation. Learning by building .
+                Currently seeking full-time opportunities in AI Engineering, Software Development, and Fullstack.
               </p>
             </Card>
 
@@ -108,6 +106,7 @@ export default function Personal() {
                 <div>• Kaggle Playground S4E6: Global Rank 198</div>
                 <div>• Selected for IITB-RISC Research Summit</div>
                 <div>• 700+ DSA problems solved on LeetCode</div>
+                <div>• Selected for Amazon ML Summer School 2025</div>
               </div>
             </Card>
           </div>
