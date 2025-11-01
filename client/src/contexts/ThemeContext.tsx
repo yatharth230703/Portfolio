@@ -3,7 +3,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type Theme = 'original' | 'light-plus' | 'solarized-dark' | 'dracula' | 'one-dark';
+export type Theme = 'original' | 'light-plus' | 'solarized-dark' | 'dracula' | 'one-dark' | 'insanity';
 
 interface ThemeContextType {
   theme: Theme;
@@ -88,6 +88,21 @@ const themeDefinitions: Record<Theme, ThemeColors> = {
       green: '#98C379',
       lavender: '#C678DD'
     }
+  },
+  'insanity': {
+    background: '#000000',
+    sidebar: '#111111',
+    primaryAccent: '#FF0000',
+    secondaryAccent: '#00FF00',
+    text: '#FFFFFF',
+    highlights: {
+      red: '#FF0000',
+      green: '#00FF00',
+      cyan: '#00FFFF',
+      orange: '#FF8800',
+      yellow: '#FFFF00',
+      lavender: '#FF00FF'
+    }
   }
 };
 
@@ -96,7 +111,8 @@ const themeNames: Record<Theme, string> = {
   'light-plus': 'Light+',
   'solarized-dark': 'Solarized Dark',
   'dracula': 'Dracula',
-  'one-dark': 'One Dark'
+  'one-dark': 'One Dark',
+  'insanity': 'Insanity'
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -115,6 +131,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const root = document.documentElement;
     const colors = themeDefinitions[theme];
+    
+    // Remove insanity class from body if switching away from insanity
+    if (theme !== 'insanity') {
+      document.body.classList.remove('insanity-mode');
+    }
     
     // Update CSS variables
     root.style.setProperty('--editor-bg', colors.background);
@@ -142,6 +163,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     if (colors.highlights.lavender) {
       root.style.setProperty('--accent-purple', colors.highlights.lavender);
+    }
+    
+    // Special handling for insanity mode
+    if (theme === 'insanity') {
+      document.body.classList.add('insanity-mode');
     }
   }, [theme]);
 

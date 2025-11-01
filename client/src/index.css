@@ -276,3 +276,142 @@
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
+/* Insanity Mode - Chaotic color pulsating animations */
+@keyframes insanity-pulse-1 {
+  0% { color: #FF0000; background-color: rgba(255, 0, 0, 0.1); }
+  16% { color: #FF8800; background-color: rgba(255, 136, 0, 0.1); }
+  32% { color: #FFFF00; background-color: rgba(255, 255, 0, 0.1); }
+  48% { color: #00FF00; background-color: rgba(0, 255, 0, 0.1); }
+  64% { color: #00FFFF; background-color: rgba(0, 255, 255, 0.1); }
+  80% { color: #0088FF; background-color: rgba(0, 136, 255, 0.1); }
+  100% { color: #FF00FF; background-color: rgba(255, 0, 255, 0.1); }
+}
+
+@keyframes insanity-pulse-2 {
+  0% { color: #FF00FF; background-color: rgba(255, 0, 255, 0.1); }
+  14% { color: #FF0000; background-color: rgba(255, 0, 0, 0.1); }
+  28% { color: #00FFFF; background-color: rgba(0, 255, 255, 0.1); }
+  42% { color: #FFFF00; background-color: rgba(255, 255, 0, 0.1); }
+  56% { color: #FF8800; background-color: rgba(255, 136, 0, 0.1); }
+  70% { color: #00FF00; background-color: rgba(0, 255, 0, 0.1); }
+  84% { color: #0088FF; background-color: rgba(0, 136, 255, 0.1); }
+  100% { color: #FF0088; background-color: rgba(255, 0, 136, 0.1); }
+}
+
+@keyframes insanity-pulse-3 {
+  0% { color: #00FF88; background-color: rgba(0, 255, 136, 0.1); }
+  12% { color: #8800FF; background-color: rgba(136, 0, 255, 0.1); }
+  24% { color: #FF8800; background-color: rgba(255, 136, 0, 0.1); }
+  36% { color: #00FF00; background-color: rgba(0, 255, 0, 0.1); }
+  48% { color: #FF0000; background-color: rgba(255, 0, 0, 0.1); }
+  60% { color: #0088FF; background-color: rgba(0, 136, 255, 0.1); }
+  72% { color: #FFFF00; background-color: rgba(255, 255, 0, 0.1); }
+  84% { color: #FF00FF; background-color: rgba(255, 0, 255, 0.1); }
+  100% { color: #00FFFF; background-color: rgba(0, 255, 255, 0.1); }
+}
+
+@keyframes insanity-border-pulse {
+  0% { border-color: #FF0000; box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+  20% { border-color: #00FF00; box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); }
+  40% { border-color: #0088FF; box-shadow: 0 0 5px rgba(0, 136, 255, 0.5); }
+  60% { border-color: #FFFF00; box-shadow: 0 0 5px rgba(255, 255, 0, 0.5); }
+  80% { border-color: #FF00FF; box-shadow: 0 0 5px rgba(255, 0, 255, 0.5); }
+  100% { border-color: #00FFFF; box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); }
+}
+
+@keyframes insanity-bg-pulse {
+  0% { background-color: rgba(255, 0, 0, 0.05); }
+  16% { background-color: rgba(255, 136, 0, 0.05); }
+  32% { background-color: rgba(255, 255, 0, 0.05); }
+  48% { background-color: rgba(0, 255, 0, 0.05); }
+  64% { background-color: rgba(0, 255, 255, 0.05); }
+  80% { background-color: rgba(0, 136, 255, 0.05); }
+  100% { background-color: rgba(255, 0, 255, 0.05); }
+}
+
+/* Apply insanity animations when body has insanity-mode class */
+.insanity-mode * {
+  animation-fill-mode: both;
+}
+
+/* Text elements */
+.insanity-mode p,
+.insanity-mode span,
+.insanity-mode div:not(.monaco-editor):not(.monaco-editor *),
+.insanity-mode h1,
+.insanity-mode h2,
+.insanity-mode h3,
+.insanity-mode h4,
+.insanity-mode h5,
+.insanity-mode h6,
+.insanity-mode label,
+.insanity-mode a {
+  animation: insanity-pulse-1 0.8s infinite ease-in-out;
+}
+
+/* Alternate animation for variety */
+.insanity-mode p:nth-child(2n),
+.insanity-mode span:nth-child(2n),
+.insanity-mode div:nth-child(2n):not(.monaco-editor):not(.monaco-editor *) {
+  animation: insanity-pulse-2 1.2s infinite ease-in-out;
+  animation-delay: 0.2s;
+}
+
+.insanity-mode p:nth-child(3n),
+.insanity-mode span:nth-child(3n),
+.insanity-mode div:nth-child(3n):not(.monaco-editor):not(.monaco-editor *) {
+  animation: insanity-pulse-3 1.5s infinite ease-in-out;
+  animation-delay: 0.4s;
+}
+
+/* Buttons */
+.insanity-mode button {
+  animation: insanity-pulse-2 1s infinite ease-in-out, insanity-border-pulse 2s infinite ease-in-out;
+  animation-delay: 0.1s, 0.3s;
+}
+
+/* Flexbox and grid containers */
+.insanity-mode .flex,
+.insanity-mode .grid,
+.insanity-mode [class*="flex"],
+.insanity-mode [class*="grid"] {
+  animation: insanity-bg-pulse 2s infinite ease-in-out;
+  animation-delay: 0.5s;
+}
+
+/* Input elements */
+.insanity-mode input,
+.insanity-mode textarea,
+.insanity-mode select {
+  animation: insanity-border-pulse 1.5s infinite ease-in-out, insanity-pulse-1 2s infinite ease-in-out;
+  animation-delay: 0.2s, 0.7s;
+}
+
+/* Borders and containers */
+.insanity-mode [class*="border"],
+.insanity-mode .border-ide {
+  animation: insanity-border-pulse 1.8s infinite ease-in-out;
+  animation-delay: 0.6s;
+}
+
+/* Special handling for Monaco editor - less aggressive */
+.insanity-mode .monaco-editor {
+  animation: insanity-bg-pulse 3s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+/* Icons and SVGs */
+.insanity-mode svg,
+.insanity-mode [class*="lucide"] {
+  animation: insanity-pulse-3 0.6s infinite ease-in-out;
+  animation-delay: 0.3s;
+}
+
+/* Cards and panels */
+.insanity-mode [class*="card"],
+.insanity-mode [class*="panel"],
+.insanity-mode .bg-sidebar,
+.insanity-mode .sidebar-bg {
+  animation: insanity-bg-pulse 2.5s infinite ease-in-out, insanity-border-pulse 3s infinite ease-in-out;
+  animation-delay: 0.8s, 1.2s;
+}
